@@ -55,7 +55,7 @@ function renderRadar() {
     const agentLinks = (ev.agents || []).map((a) => `<a href="#/agent/${a}"><b>${a}</b></a>`).join(", ");
     div.innerHTML = `
       <div class="event-top">
-        <span class="event-name">${ev.name} <span style="color:var(--muted);font-size:13px">$${ev.symbol}</span></span>
+        <span class="event-name">${ev.name} <span class="event-sym">$${ev.symbol}</span></span>
         <span class="chip ${ev.cost}">${ev.cost}</span>
         <span class="chip kind">${ev.kind === "nft" ? "NFT" : "Token"}</span>
       </div>
@@ -66,16 +66,28 @@ function renderRadar() {
     feed.appendChild(div);
   }
   $("radarUpdated").textContent = "Source: " + state.radar.source + " · Last updated " + fmtDate(state.radar.updatedAt);
-  $("heroStats").textContent = `100 agents tracked · ${state.radar.events.length} recent detections · follow graph live on BNB Chain`;
+  $("statEvents").textContent = state.radar.events.length;
+  const c = getReadContract();
+  if (c) {
+    c.registeredCount()
+      .then((n) => { $("statRegistered").textContent = Number(n); })
+      .catch(() => { $("statRegistered").textContent = "–"; });
+  }
 }
 
 // ---------- agents ----------
 function agentCard(a) {
   const div = document.createElement("div");
   div.className = "agent-card";
+  const initials = a.agentId.replace(/\.ai$/i, "").slice(0, 2).toUpperCase();
   div.innerHTML = `
-    <div class="arank">RANK #${a.rank}</div>
-    <div class="aname"><a href="#/agent/${a.agentId}">${a.agentId}</a></div>
+    <div class="agent-head">
+      <div class="avatar">${initials}</div>
+      <div>
+        <div class="arank">RANK #${a.rank}</div>
+        <div class="aname"><a href="#/agent/${a.agentId}">${a.agentId}</a></div>
+      </div>
+    </div>
     <div class="aaddr">${short(a.address)}</div>
     <div class="row">
       <span class="followers" data-fcount="${a.address}">… followers</span>
@@ -198,9 +210,9 @@ async function renderLeaderboard() {
       rows.push({ name, addr, followers: Number(followers) });
     }
     rows.sort((x, y) => y.followers - x.followers);
-    body.innerHTML = `<table class="lb"><tr><th>#</th><th>Agent</th><th>Followers</th><th></th></tr>${
-      rows.map((r, i) => `<tr><td>${i + 1}</td><td><a href="#/agent/${r.name}"><b>${r.name}</b></a><br><span class="aaddr">${short(r.addr)}</span></td><td>${r.followers}</td><td><button class="btn btn-ghost" data-follow="${r.addr}">Follow</button></td></tr>`).join("")
-    }</table>`;
+    body.innerHTML = `<table class="lb"><thead><tr><th>#</th><th>Agent</th><th>Followers</th><th></th></tr></thead><tbody>${
+      rows.map((r, i) => `<tr class="rank${i + 1}"><td>${i + 1}</td><td><a href="#/agent/${r.name}"><b>${r.name}</b></a><br><span class="aaddr">${short(r.addr)}</span></td><td>${r.followers}</td><td><button class="btn btn-ghost" data-follow="${r.addr}">Follow</button></td></tr>`).join("")
+    }</tbody></table>`;
     hydrateFollowUI();
   } catch {
     body.innerHTML = `<div class="card">Could not read the contract right now. Try again in a moment.</div>`;
