@@ -4,6 +4,43 @@
    "agents": [
     "0xjl1222.ai"
    ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T14:50:01+01:00",
+   "contract": "0xccd663253e201a02f77c68f7bf74a370c0d1a8ec",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Forge Miners",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "FORGEM"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai",
+    "0xshenyuan.ai",
+    "chesenas1.ai",
+    "ianever.ai",
+    "mr1617.ai",
+    "pipi888.ai",
+    "rukia.ai",
+    "song000.ai",
+    "xiaopeng.ai",
+    "xiyu3.ai"
+   ],
+   "agentsNote": "10 tracked agents minted",
+   "at": "2026-11-19T14:45:38+01:00",
+   "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
+   "cost": "free",
+   "kind": "token",
+   "minters": 10,
+   "name": "Agentic Coin",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "AGC"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai"
+   ],
    "agentsNote": "1 tracked agents minted",
    "at": "2026-11-19T13:01:19+01:00",
    "contract": "0x4158b701eaa30e8fadbaa526f70780a38318c1c4",
@@ -65,28 +102,6 @@
    "name": "LoopAgent",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "Agent"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai",
-    "0xshenyuan.ai",
-    "chesenas1.ai",
-    "ianever.ai",
-    "pipi888.ai",
-    "rukia.ai",
-    "song000.ai",
-    "xiaopeng.ai",
-    "xiyu3.ai"
-   ],
-   "agentsNote": "9 tracked agents minted",
-   "at": "2026-11-19T12:55:16+01:00",
-   "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
-   "cost": "free",
-   "kind": "token",
-   "minters": 9,
-   "name": "Agentic Coin",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "AGC"
   },
   {
    "agents": [
@@ -482,5 +497,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-19T13:31:15.951053+01:00"
+ "updatedAt": "2026-11-19T15:03:15.668012+01:00"
 }
