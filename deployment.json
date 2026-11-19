@@ -1,0 +1,9 @@
+{
+  "contract": "0x1B9716550E14eC50f9d058942a344C00379d5443",
+  "deployTx": "0x718a9aa4a125c0ea7cb3ba7ab77c5f77e7292e0696f87d74b5dce925a7e49b2b",
+  "block": 134405215,
+  "gasUsed": "886863",
+  "feeBnb": "0.00004434315",
+  "deployer": "0x9fe9524384aA26073cDd731055622B9268421039",
+  "chainId": 56
+}
