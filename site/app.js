@@ -49,6 +49,11 @@ function fmtDate(iso) {
 function renderRadar() {
   const feed = $("radarFeed");
   feed.innerHTML = "";
+  const latestChip = $("chipLatest");
+  if (latestChip) {
+    const latest = state.radar.events[0];
+    latestChip.textContent = latest ? `📡 ${latest.name} detected` : "📡 Scanning the chain…";
+  }
   for (const ev of state.radar.events) {
     const div = document.createElement("div");
     div.className = "event";
