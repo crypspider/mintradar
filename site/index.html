@@ -7,18 +7,18 @@
 <meta name="description" content="A live radar of what the top AI agent wallets on BNB Chain are minting. Follow agents by their Agent ID (name.ai), not raw addresses.">
 <meta property="og:title" content="MintRadar">
 <meta property="og:description" content="Live radar of what top AI agent wallets on BNB Chain are minting. Follow agents by Agent ID.">
+<meta property="og:image" content="img/logo.jpg">
+<link rel="icon" type="image/jpeg" href="img/logo-mark.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
   <div class="wrap header-in">
     <a class="logo" href="#/radar">
-      <span class="logo-mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40" width="34" height="34"><circle cx="20" cy="20" r="18" fill="none" stroke="#F0B90B" stroke-width="2.5"/><circle cx="20" cy="20" r="11" fill="none" stroke="#F0B90B" stroke-width="2" opacity=".55"/><circle cx="20" cy="20" r="4.5" fill="#F0B90B"/><path d="M20 20 L33 9" stroke="#0ECB81" stroke-width="2.5" stroke-linecap="round"/><circle cx="28.5" cy="13.5" r="2.4" fill="#0ECB81"/></svg>
-      </span>
+      <img class="logo-img" src="img/logo-mark.jpg" alt="MintRadar logo">
       Mint<span class="logo-accent">Radar</span>
     </a>
     <nav>
@@ -27,7 +27,7 @@
       <a href="#/leaderboard" data-nav="leaderboard">Leaderboard</a>
       <a href="#/register" data-nav="register">Register</a>
     </nav>
-    <button id="connectBtn" class="btn btn-gold">Connect Wallet</button>
+    <button id="connectBtn" class="btn btn-grad">Connect Wallet</button>
   </div>
 </header>
 
@@ -40,25 +40,23 @@
         <h1>The agents mint first.<br>MintRadar shows you <span class="accent">when</span>.</h1>
         <p class="sub">We watch 100 of the top AI agent wallets on BNB Chain around the clock. Every mint they make lands here — while it's still early, not after it trends.</p>
         <div class="hero-ctas">
-          <a class="btn btn-gold btn-lg" href="#/agents">Browse the agents</a>
-          <a class="btn btn-dark btn-lg" href="#/register">Register your Agent ID</a>
+          <a class="btn btn-grad btn-lg" href="#/agents">Browse the agents</a>
+          <a class="btn btn-light btn-lg" href="#/register">Register your Agent ID</a>
         </div>
         <div class="stats-row">
           <div class="stat"><div class="stat-num">100</div><div class="stat-label">Agents tracked</div></div>
           <div class="stat"><div class="stat-num" id="statEvents">–</div><div class="stat-label">Recent detections</div></div>
           <div class="stat"><div class="stat-num" id="statRegistered">–</div><div class="stat-label">Registered on-chain</div></div>
-          <div class="stat"><div class="stat-num gold">24/7</div><div class="stat-label">Radar watch</div></div>
+          <div class="stat"><div class="stat-num grad-text">24/7</div><div class="stat-label">Radar watch</div></div>
         </div>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="radar-disc">
-          <div class="radar-sweep"></div>
-          <span class="blip b1"></span><span class="blip b2"></span><span class="blip b3"></span><span class="blip b4"></span>
-          <span class="radar-tag t1">PXIO Miners</span>
-          <span class="radar-tag t2">AGENTONE</span>
-          <span class="radar-tag t3">YAMA</span>
+      <div class="hero-visual">
+        <div class="logo-card">
+          <img src="img/logo.jpg" alt="MintRadar — the radar for agent mints">
+          <span class="float-chip fc1">📡 PXIO Miners detected</span>
+          <span class="float-chip fc2">✅ crypspider.ai registered</span>
         </div>
-        <p class="visual-caption">Scanning 100 agent wallets · BNB Chain mainnet</p>
+        <p class="visual-caption">One radar · every agent mint · BNB Chain mainnet</p>
       </div>
     </div>
 
@@ -66,6 +64,28 @@
       <div class="step"><div class="step-num">01</div><h3>We watch</h3><p>100 top Agent ID wallets, scanned on a 3-hour cycle, every mint verified on-chain.</p></div>
       <div class="step"><div class="step-num">02</div><h3>You see it early</h3><p>Detections land in the feed with minters, cost and the tracked agents who moved.</p></div>
       <div class="step"><div class="step-num">03</div><h3>Follow on-chain</h3><p>Register your <b>name.ai</b> and follow agents — the follow graph lives in the contract.</p></div>
+    </div>
+
+    <h2 class="section-title"><span class="sec-bar"></span>What the radar catches</h2>
+    <div class="showcase">
+      <article class="show-card">
+        <img src="img/nft.png" alt="NFT coin hologram — NFT mints tracked by MintRadar">
+        <div class="show-body">
+          <p class="show-kicker">NFT MINTS</p>
+          <h3>Every NFT drop, caught the moment it mints</h3>
+          <p>Free and paid NFT launches from the sharpest agent wallets — supply, minters and cost, on your radar before the floor even exists.</p>
+          <a class="show-link" href="#/radar">See the latest detections →</a>
+        </div>
+      </article>
+      <article class="show-card">
+        <img src="img/bnb-coin.webp" alt="Gold BNB coin — token mints on BNB Chain">
+        <div class="show-body">
+          <p class="show-kicker">TOKEN MINTS · BNB CHAIN</p>
+          <h3>New tokens the agents are quietly loading</h3>
+          <p>Fresh token mints verified on-chain and priced in BNB. When 100 top agents move on the same contract, you hear about it here first.</p>
+          <a class="show-link" href="#/agents">Meet the tracked agents →</a>
+        </div>
+      </article>
     </div>
 
     <h2 class="section-title"><span class="sec-bar"></span>Latest detections</h2>
@@ -105,7 +125,7 @@
       <p><strong>Verified badge:</strong> Agent ID names resolve through Binance's resolution service. Your profile earns the ✅ Verified badge only when your name resolves to the same wallet that registered it — nobody can impersonate another agent.</p>
       <div class="reg-row">
         <input id="regName" type="text" placeholder="yourname.ai" autocomplete="off">
-        <button id="regBtn" class="btn btn-gold">Register on-chain</button>
+        <button id="regBtn" class="btn btn-grad">Register on-chain</button>
       </div>
       <p id="regStatus" class="status"></p>
       <p class="foot-note">Registration is a small BNB Chain transaction (a fraction of a cent in gas at current prices). The contract holds no funds and issues no token.</p>
@@ -119,7 +139,7 @@
 
 <footer>
   <div class="wrap foot-in">
-    <span>MintRadar — built by <strong>crypspider.ai</strong> for the Binance Wallet × BNB Chain Agent ID Hackathon.</span>
+    <span class="foot-brand"><img class="foot-logo" src="img/logo-mark.jpg" alt=""> MintRadar — built by <strong>crypspider.ai</strong> for the Binance Wallet × BNB Chain Agent ID Hackathon.</span>
     <span id="contractLine"></span>
   </div>
 </footer>
