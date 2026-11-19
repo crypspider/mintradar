@@ -2,6 +2,72 @@
  "events": [
   {
    "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agents minted",
+   "at": "2026-11-19T13:01:19+01:00",
+   "contract": "0x4158b701eaa30e8fadbaa526f70780a38318c1c4",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Lumen Findings",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "FIND"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T13:01:00+01:00",
+   "contract": "0xffc521d504f20bd7bcd0871b9b39ba9501f5db2c",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Talvio Dot Robot",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "DOTR"
+  },
+  {
+   "agents": [
+    "mr1617.ai",
+    "nofomok.ai",
+    "song000.ai"
+   ],
+   "agentsNote": "3 tracked agents minted",
+   "at": "2026-11-19T13:00:37+01:00",
+   "contract": "0xc993949a16096888774926279088ed655f527dee",
+   "cost": "paid",
+   "kind": "token",
+   "minters": 3,
+   "name": "LoopAgent LP",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "AgentLP"
+  },
+  {
+   "agents": [
+    "1518.ai",
+    "afeng123.ai",
+    "afeng456.ai",
+    "cx1988.ai",
+    "kkuhn.ai",
+    "mr1617.ai",
+    "nofomok.ai",
+    "pipi888.ai",
+    "yuki888.ai"
+   ],
+   "agentsNote": "9 tracked agents minted",
+   "at": "2026-11-19T12:57:03+01:00",
+   "contract": "0x4916c1f266ecce3805ff788d531777af4e160856",
+   "cost": "paid",
+   "kind": "token",
+   "minters": 9,
+   "name": "LoopAgent",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "Agent"
+  },
+  {
+   "agents": [
     "0xjl1222.ai",
     "0xshenyuan.ai",
     "chesenas1.ai",
@@ -21,44 +87,6 @@
    "name": "Agentic Coin",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "AGC"
-  },
-  {
-   "agents": [
-    "1518.ai",
-    "afeng123.ai",
-    "afeng456.ai",
-    "cx1988.ai",
-    "kkuhn.ai",
-    "mr1617.ai",
-    "nofomok.ai",
-    "pipi888.ai",
-    "yuki888.ai"
-   ],
-   "agentsNote": "9 tracked agents minted",
-   "at": "2026-11-19T12:45:51+01:00",
-   "contract": "0x4916c1f266ecce3805ff788d531777af4e160856",
-   "cost": "paid",
-   "kind": "token",
-   "minters": 9,
-   "name": "LoopAgent",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "Agent"
-  },
-  {
-   "agents": [
-    "mr1617.ai",
-    "nofomok.ai",
-    "song000.ai"
-   ],
-   "agentsNote": "3 tracked agents minted",
-   "at": "2026-11-19T12:32:00+01:00",
-   "contract": "0xc993949a16096888774926279088ed655f527dee",
-   "cost": "paid",
-   "kind": "token",
-   "minters": 3,
-   "name": "LoopAgent LP",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "AgentLP"
   },
   {
    "agents": [
@@ -87,20 +115,6 @@
    "name": "OUPE Cards",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "OUPECARD"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai"
-   ],
-   "agentsNote": "1 tracked agents minted",
-   "at": "2026-11-19T10:01:15+01:00",
-   "contract": "0x4158b701eaa30e8fadbaa526f70780a38318c1c4",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Lumen Findings",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "FIND"
   },
   {
    "agents": [
@@ -468,5 +482,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-19T12:57:06.084731+01:00"
+ "updatedAt": "2026-11-19T13:31:15.951053+01:00"
 }
