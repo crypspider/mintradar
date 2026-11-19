@@ -70,7 +70,12 @@ function renderRadar() {
   const c = getReadContract();
   if (c) {
     c.registeredCount()
-      .then((n) => { $("statRegistered").textContent = Number(n); })
+      .then((n) => {
+        const count = Number(n);
+        $("statRegistered").textContent = count;
+        const chip = $("chipRegistered");
+        if (chip) chip.textContent = "✅ " + count + (count === 1 ? " agent" : " agents") + " registered on-chain";
+      })
       .catch(() => { $("statRegistered").textContent = "–"; });
   }
 }
