@@ -231,9 +231,12 @@ async function renderMyProfile() {
   if (!c) { el.textContent = "The registry contract is deploying — registration opens at launch."; return; }
   if (!state.wallet) { el.textContent = "Connect your wallet to see your status."; return; }
   const name = await c.agentIdOf(state.wallet);
-  el.innerHTML = name
-    ? `You are registered as <b>${name}</b> ✅ · <span data-fcount="${state.wallet}"></span>`
-    : "This wallet has not registered an Agent ID yet.";
+  if (name) {
+    const [followers, following] = await Promise.all([c.followerCount(state.wallet), c.followingCount(state.wallet)]);
+    el.innerHTML = `You are registered as <b>${name}</b> ✅ · ${Number(followers)} follower${Number(followers) === 1 ? "" : "s"} · following ${Number(following)} · <a href="#/leaderboard">View the leaderboard</a>`;
+  } else {
+    el.textContent = "This wallet has not registered an Agent ID yet.";
+  }
   hydrateFollowUI();
 }
 
@@ -258,6 +261,17 @@ $("regBtn").addEventListener("click", async () => {
 });
 
 // ---------- wallet ----------
+async function refreshConnectLabel() {
+  if (!state.wallet) { $("connectBtn").textContent = "Connect Wallet"; return; }
+  $("connectBtn").textContent = short(state.wallet);
+  try {
+    const c = getReadContract();
+    if (!c) return;
+    const name = await c.agentIdOf(state.wallet);
+    if (name) $("connectBtn").textContent = "✅ " + name;
+  } catch { /* keep the address label */ }
+}
+
 async function connectWallet() {
   if (!window.ethereum) { alert("No wallet found. Open MintRadar in your wallet's browser (e.g. Binance Wallet) or a browser with a Web3 wallet extension."); return; }
   try {
@@ -269,12 +283,34 @@ async function connectWallet() {
     state.signer = await provider.getSigner();
     state.wallet = await state.signer.getAddress();
     if (CFG.CONTRACT_ADDRESS) state.contract = new ethers.Contract(CFG.CONTRACT_ADDRESS, REGISTRY_ABI, state.signer);
-    $("connectBtn").textContent = short(state.wallet);
+    refreshConnectLabel();
     hydrateFollowUI();
     renderMyProfile();
   } catch { /* user rejected */ }
 }
 $("connectBtn").addEventListener("click", connectWallet);
+
+// Silently reconnect a wallet that already authorised this site, so a
+// returning user immediately sees their registered agent — no "login" hunt.
+async function autoReconnect() {
+  if (!window.ethereum) return;
+  try {
+    const accounts = await window.ethereum.request({ method: "eth_accounts" });
+    if (!accounts || !accounts.length) return;
+    const chainId = await window.ethereum.request({ method: "eth_chainId" });
+    if (parseInt(chainId, 16) !== CFG.BSC_CHAIN_ID) return;
+    const provider = new ethers.BrowserProvider(window.ethereum);
+    state.signer = await provider.getSigner();
+    state.wallet = await state.signer.getAddress();
+    if (CFG.CONTRACT_ADDRESS) state.contract = new ethers.Contract(CFG.CONTRACT_ADDRESS, REGISTRY_ABI, state.signer);
+    refreshConnectLabel();
+    hydrateFollowUI();
+    renderMyProfile();
+  } catch { /* not authorised yet — the Connect button covers it */ }
+}
+if (window.ethereum && window.ethereum.on) {
+  window.ethereum.on("accountsChanged", () => { state.wallet = null; state.signer = null; state.contract = null; refreshConnectLabel(); autoReconnect(); renderMyProfile(); });
+}
 
 // ---------- routing ----------
 function route() {
@@ -306,4 +342,5 @@ $("agentSearch").addEventListener("input", (e) => renderAgents(e.target.value));
     $("contractLine").textContent = "Registry contract: deploying";
   }
   route();
+  autoReconnect();
 })();
