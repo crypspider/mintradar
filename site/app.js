@@ -311,25 +311,48 @@ $("connectBtn").addEventListener("click", connectWallet);
 
 // Silently reconnect a wallet that already authorised this site, so a
 // returning user immediately sees their registered agent — no "login" hunt.
+// The address alone drives the display (name, profile, follow state); the
+// signer is attached when the chain is right, and any action that needs to
+// sign will complete the connection on demand.
 async function autoReconnect() {
-  if (!window.ethereum) return;
+  if (!window.ethereum || state.wallet) return;
   try {
     const accounts = await window.ethereum.request({ method: "eth_accounts" });
     if (!accounts || !accounts.length) return;
-    const chainId = await window.ethereum.request({ method: "eth_chainId" });
-    if (parseInt(chainId, 16) !== CFG.BSC_CHAIN_ID) return;
-    const provider = new ethers.BrowserProvider(window.ethereum);
-    state.signer = await provider.getSigner();
-    state.wallet = await state.signer.getAddress();
-    if (CFG.CONTRACT_ADDRESS) state.contract = new ethers.Contract(CFG.CONTRACT_ADDRESS, REGISTRY_ABI, state.signer);
+    state.wallet = accounts[0];
+    try {
+      const chainId = await window.ethereum.request({ method: "eth_chainId" });
+      if (parseInt(chainId, 16) === CFG.BSC_CHAIN_ID) {
+        const provider = new ethers.BrowserProvider(window.ethereum);
+        state.signer = await provider.getSigner();
+        state.wallet = await state.signer.getAddress();
+        if (CFG.CONTRACT_ADDRESS) state.contract = new ethers.Contract(CFG.CONTRACT_ADDRESS, REGISTRY_ABI, state.signer);
+      }
+    } catch { /* display-only connection is fine */ }
     refreshConnectLabel();
     hydrateFollowUI();
     renderMyProfile();
   } catch { /* not authorised yet — the Connect button covers it */ }
 }
 if (window.ethereum && window.ethereum.on) {
-  window.ethereum.on("accountsChanged", () => { state.wallet = null; state.signer = null; state.contract = null; refreshConnectLabel(); autoReconnect(); renderMyProfile(); });
+  window.ethereum.on("accountsChanged", (accounts) => {
+    if (accounts && accounts.length) {
+      state.wallet = accounts[0];
+      refreshConnectLabel();
+      hydrateFollowUI();
+      renderMyProfile();
+    } else {
+      state.wallet = null; state.signer = null; state.contract = null;
+      refreshConnectLabel();
+      renderMyProfile();
+    }
+  });
+  window.ethereum.on("chainChanged", () => { autoReconnect(); });
 }
+// Mobile wallet browsers love dropping the connection when you move around;
+// re-check silently whenever the page comes back into view.
+window.addEventListener("pageshow", () => { autoReconnect(); });
+document.addEventListener("visibilitychange", () => { if (!document.hidden) autoReconnect(); });
 
 // ---------- routing ----------
 function route() {
@@ -346,6 +369,7 @@ function route() {
   if (view === "agent") renderAgentProfile(decodeURIComponent(parts[1] || ""));
   if (view === "leaderboard") renderLeaderboard();
   if (view === "register") renderMyProfile();
+  if (!state.wallet) autoReconnect();
   window.scrollTo(0, 0);
 }
 window.addEventListener("hashchange", route);
