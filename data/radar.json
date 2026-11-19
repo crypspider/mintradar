@@ -2,6 +2,21 @@
  "events": [
   {
    "agents": [
+    "a9julebu.ai",
+    "qifeiba.ai"
+   ],
+   "agentsNote": "2 tracked agents minted",
+   "at": "2026-11-19T17:19:57+01:00",
+   "contract": "0x8434d0ea4521471c25f94aaa707b33d95486c2e7",
+   "cost": "paid",
+   "kind": "nft",
+   "minters": 2,
+   "name": "agentGTA Arms",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "AGTA"
+  },
+  {
+   "agents": [
     "0xjl1222.ai"
    ],
    "agentsNote": "1 tracked agents minted",
@@ -528,5 +543,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-19T16:26:51.953110+01:00"
+ "updatedAt": "2026-11-19T18:41:09.459299+01:00"
 }
