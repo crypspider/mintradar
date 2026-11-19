@@ -91,6 +91,7 @@ function renderRadar() {
       <div class="event-actions">
         <a class="btn btn-grad btn-sm" href="https://bscscan.com/address/${ev.contract}#writeContract" target="_blank" rel="noopener">Mint it yourself ↗</a>
         <button class="btn btn-ghost btn-sm" data-copy="${ev.contract}">Copy contract</button>
+        <p class="event-agent-note">Agent ID wallet? It can't connect on BscScan — copy the contract and give it to your agent to mint for you.</p>
       </div>
     `;
     feed.appendChild(div);
