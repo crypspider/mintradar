@@ -17,7 +17,7 @@ const REGISTRY_ABI = [
 
 const $ = (id) => document.getElementById(id);
 const short = (a) => a.slice(0, 6) + "…" + a.slice(-4);
-const state = { agents: [], radar: null, wallet: null, signer: null, contract: null, readContract: null };
+const state = { agents: [], radar: null, wallet: null, signer: null, contract: null, readContract: null, radarQuery: "", radarFilter: "all" };
 
 function readProvider() {
   return new ethers.JsonRpcProvider(CFG.BSC_RPC);
@@ -54,7 +54,22 @@ function renderRadar() {
     const latest = state.radar.events[0];
     latestChip.textContent = latest ? `📡 ${latest.name} detected` : "📡 Scanning the chain…";
   }
-  for (const ev of state.radar.events) {
+  const q = (state.radarQuery || "").trim().toLowerCase();
+  const f = state.radarFilter || "all";
+  const events = state.radar.events.filter((ev) => {
+    if (f === "nft" || f === "token") { if (ev.kind !== f) return false; }
+    if (f === "free" || f === "paid") { if (ev.cost !== f) return false; }
+    if (q) {
+      const hay = [ev.name, ev.symbol, ev.kind, ev.cost, ...(ev.agents || [])].join(" ").toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  if (!events.length) {
+    feed.innerHTML = `<div class="card">No detections match that yet — the radar keeps scanning every few minutes.</div>`;
+    return;
+  }
+  for (const ev of events) {
     const div = document.createElement("div");
     div.className = "event";
     const agentLinks = (ev.agents || []).map((a) => `<a href="#/agent/${a}"><b>${a}</b></a>`).join(", ");
@@ -393,6 +408,14 @@ function route() {
 }
 window.addEventListener("hashchange", route);
 $("agentSearch").addEventListener("input", (e) => renderAgents(e.target.value));
+$("radarSearch").addEventListener("input", (e) => { state.radarQuery = e.target.value; renderRadar(); });
+document.querySelectorAll("[data-rfilter]").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll("[data-rfilter]").forEach((b) => b.classList.toggle("active", b === btn));
+    state.radarFilter = btn.dataset.rfilter;
+    renderRadar();
+  });
+});
 
 // ---------- init ----------
 (async () => {
