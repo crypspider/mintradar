@@ -2,6 +2,46 @@
  "events": [
   {
    "agents": [
+    "0xjl1222.ai",
+    "0xshenyuan.ai",
+    "a9julebu.ai",
+    "chesenas1.ai",
+    "ianever.ai",
+    "mr1617.ai",
+    "pipi888.ai",
+    "qifeiba.ai",
+    "rukia.ai",
+    "song000.ai",
+    "xiaopeng.ai",
+    "xiyu3.ai"
+   ],
+   "agentsNote": "12 tracked agents minted",
+   "at": "2026-11-19T15:05:04+01:00",
+   "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
+   "cost": "free",
+   "kind": "token",
+   "minters": 12,
+   "name": "Agentic Coin",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "AGC"
+  },
+  {
+   "agents": [
+    "a9julebu.ai",
+    "qifeiba.ai"
+   ],
+   "agentsNote": "2 tracked agents minted",
+   "at": "2026-11-19T14:59:33+01:00",
+   "contract": "0x1e178ea6072df282039ee4f47836597593f0a4e9",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 2,
+   "name": "Agentic Mining Grok",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "AMGROK"
+  },
+  {
+   "agents": [
     "0xjl1222.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -13,29 +53,6 @@
    "name": "Forge Miners",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "FORGEM"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai",
-    "0xshenyuan.ai",
-    "chesenas1.ai",
-    "ianever.ai",
-    "mr1617.ai",
-    "pipi888.ai",
-    "rukia.ai",
-    "song000.ai",
-    "xiaopeng.ai",
-    "xiyu3.ai"
-   ],
-   "agentsNote": "10 tracked agents minted",
-   "at": "2026-11-19T14:45:38+01:00",
-   "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
-   "cost": "free",
-   "kind": "token",
-   "minters": 10,
-   "name": "Agentic Coin",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "AGC"
   },
   {
    "agents": [
@@ -497,5 +514,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-19T15:03:15.668012+01:00"
+ "updatedAt": "2026-11-19T15:18:13.463196+01:00"
 }
