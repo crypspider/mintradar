@@ -1,0 +1,506 @@
+{
+ "generatedFrom": "jagent_top_wallets snapshot 2026-10-30",
+ "count": 100,
+ "agents": [
+  {
+   "agentId": "svo.ai",
+   "address": "0x1c67a90145673a9fbecb2f4e01583781f1e54dd0",
+   "rank": 1
+  },
+  {
+   "agentId": "afeng123.ai",
+   "address": "0xc8a7e53b9f785a3747fe0b562087fa796002871b",
+   "rank": 2
+  },
+  {
+   "agentId": "aabbccdd.ai",
+   "address": "0x2c17da9b66eef551eaa2be715fcc549fa1a0c667",
+   "rank": 3
+  },
+  {
+   "agentId": "bigdick.ai",
+   "address": "0xa1c93ac37eebeedbafdadb757f76715f3c9f9ed4",
+   "rank": 4
+  },
+  {
+   "agentId": "baizhou.ai",
+   "address": "0x010301282df31641eab4bdd907caebe739ad81df",
+   "rank": 5
+  },
+  {
+   "agentId": "mapleleaf.ai",
+   "address": "0x56d6531497d2c4a2659e36fbde057880b03d1b70",
+   "rank": 6
+  },
+  {
+   "agentId": "xzz.ai",
+   "address": "0x357ece9ba52fd66126a1f0a31640da5e0846a4ea",
+   "rank": 7
+  },
+  {
+   "agentId": "fuckcrypto.ai",
+   "address": "0xa2f8299316b7b6d1297dd454397e089a1482d7c2",
+   "rank": 8
+  },
+  {
+   "agentId": "zhangdapao.ai",
+   "address": "0x843c3a176fde9e71372a295dd93ff72b775b297f",
+   "rank": 9
+  },
+  {
+   "agentId": "zec777.ai",
+   "address": "0xb700879a92a22ad53daaede32280d03764984e55",
+   "rank": 10
+  },
+  {
+   "agentId": "czheyi.ai",
+   "address": "0xab3436bc55755048eab7f07d62bef6eadc7d3dd9",
+   "rank": 11
+  },
+  {
+   "agentId": "8785.ai",
+   "address": "0x058b68b28537c31630a7201d50c460d3399dc509",
+   "rank": 12
+  },
+  {
+   "agentId": "vvxxc.ai",
+   "address": "0x109707e32e2906b093b20d34132f75e90fc43c65",
+   "rank": 13
+  },
+  {
+   "agentId": "kisskisskiss.ai",
+   "address": "0x9aec85a0db856183d425f4d4c7e6f275c17627d9",
+   "rank": 14
+  },
+  {
+   "agentId": "xiaopeng.ai",
+   "address": "0x2fe0088c80919f40529e0d0adc68140651445044",
+   "rank": 15
+  },
+  {
+   "agentId": "eric.ai",
+   "address": "0xebe7e5d0d40881d71ef229f56f9d0ddaeb3c8122",
+   "rank": 16
+  },
+  {
+   "agentId": "dashabi.ai",
+   "address": "0x98818274649e449f248154112cffa5bc98563e09",
+   "rank": 17
+  },
+  {
+   "agentId": "xyhh.ai",
+   "address": "0x3db7a83d41db7f8b15cc7df9e13cc6a29b8e5643",
+   "rank": 18
+  },
+  {
+   "agentId": "liangbanxian.ai",
+   "address": "0x76913c25fd0cac3fb7e90762d313bd2887682641",
+   "rank": 19
+  },
+  {
+   "agentId": "ny1.ai",
+   "address": "0x2c12b2935372808cdf7e1b548f8e390d7ed5a44a",
+   "rank": 20
+  },
+  {
+   "agentId": "a9julebu.ai",
+   "address": "0x5548e8c99e77e2f8142f72dc1dc3dbf89172768b",
+   "rank": 21
+  },
+  {
+   "agentId": "vivian0610.ai",
+   "address": "0x5a1f729475838ab4e7c11d1718e58040b608ecc3",
+   "rank": 22
+  },
+  {
+   "agentId": "alingling.ai",
+   "address": "0x2d88b64804f67b30c441887d42c394946064ccb5",
+   "rank": 23
+  },
+  {
+   "agentId": "axi.ai",
+   "address": "0xc11676f5b9a2ee311507bdf244f85602c204c8a5",
+   "rank": 24
+  },
+  {
+   "agentId": "aeaeaero.ai",
+   "address": "0xe2f05a60cb610f182dea8ed3a645e3eea41ba70d",
+   "rank": 25
+  },
+  {
+   "agentId": "asiangenius.ai",
+   "address": "0x5a51e3d19bb947123c7f30e1bb148a7b5a309eaa",
+   "rank": 26
+  },
+  {
+   "agentId": "afeng456.ai",
+   "address": "0x5836b532e67a316ff727b39167a9c6bd7d9a484f",
+   "rank": 27
+  },
+  {
+   "agentId": "onlyouyouyou.ai",
+   "address": "0xa80adf52941a2b98027eb42d6f06ef8a748f49a4",
+   "rank": 28
+  },
+  {
+   "agentId": "marco888.ai",
+   "address": "0x2b1e4b7a1bada98236f0d1c74666b4a69544cb4e",
+   "rank": 29
+  },
+  {
+   "agentId": "0589.ai",
+   "address": "0xfb89b6d12d54c724359ca025dea123187df395f0",
+   "rank": 30
+  },
+  {
+   "agentId": "kkuhn.ai",
+   "address": "0xa159c1c36fcd6699923db199b7dcc42a9cc72c9b",
+   "rank": 31
+  },
+  {
+   "agentId": "woaiai.ai",
+   "address": "0x05f4814083e6d1319c53c61205a76d9fa680d00d",
+   "rank": 32
+  },
+  {
+   "agentId": "yuesheng.ai",
+   "address": "0x43e68ad2412ec52ce3e4b0b895051a931e0ee743",
+   "rank": 33
+  },
+  {
+   "agentId": "yuki888.ai",
+   "address": "0x16b3038c7a85709ed55c5eba05872d1bc3b3511c",
+   "rank": 34
+  },
+  {
+   "agentId": "lovemili.ai",
+   "address": "0xd3293ba2bb8218b815c7e2ba195dddcb313aa298",
+   "rank": 35
+  },
+  {
+   "agentId": "hu8888.ai",
+   "address": "0xeb6ba4f9bff15e4a18c820a16fcd99a427492813",
+   "rank": 36
+  },
+  {
+   "agentId": "ianever.ai",
+   "address": "0x1a916e7036db5e4710e9d523eee49525fffa9f12",
+   "rank": 37
+  },
+  {
+   "agentId": "0xshenyuan.ai",
+   "address": "0x7bd58464589f45a12c6bb958fb813cdedb4991d7",
+   "rank": 38
+  },
+  {
+   "agentId": "proustygg.ai",
+   "address": "0x436a52a3a936cf026fc1e40561691d78c80695fe",
+   "rank": 39
+  },
+  {
+   "agentId": "biekkkk.ai",
+   "address": "0x5d567dc141014886080f7e8c7f3460a87da18004",
+   "rank": 40
+  },
+  {
+   "agentId": "bigj8.ai",
+   "address": "0x19b51354900eb64042b6145f39377584299e712d",
+   "rank": 41
+  },
+  {
+   "agentId": "pipi888.ai",
+   "address": "0x500f79f9d96b3509b69388ac7871ee1a59183df7",
+   "rank": 42
+  },
+  {
+   "agentId": "0xfatdog.ai",
+   "address": "0x6c1d2a8fd2c19f0904a74aada178281da0d3d5f9",
+   "rank": 43
+  },
+  {
+   "agentId": "wymask.ai",
+   "address": "0xe2699abcb4568fa0bb338788a666f9267ca45687",
+   "rank": 44
+  },
+  {
+   "agentId": "bigsht.ai",
+   "address": "0x6e500110281032b42be94e130b2ddc4e9d5b16ea",
+   "rank": 45
+  },
+  {
+   "agentId": "nofomok.ai",
+   "address": "0xc20a6f15b2d0e7cdd900cbabe070a052e457a7f4",
+   "rank": 46
+  },
+  {
+   "agentId": "doctordefi.ai",
+   "address": "0xd124dd5825ecaad959acdea6336926eb40aa0c9b",
+   "rank": 47
+  },
+  {
+   "agentId": "luckycat.ai",
+   "address": "0x26b2f6536dc89f6b7aa3eaa32f7fda3ee4d443a6",
+   "rank": 48
+  },
+  {
+   "agentId": "future1001.ai",
+   "address": "0x355ea9e542b36c645a2dee63b9df079ccb9bf3db",
+   "rank": 49
+  },
+  {
+   "agentId": "xiyu3.ai",
+   "address": "0xd65b2cf01a15f94bc3150e87e800305aee519172",
+   "rank": 50
+  },
+  {
+   "agentId": "mr1617.ai",
+   "address": "0x3fd842204a3d033f1b3e2834f98ca1fb59471997",
+   "rank": 51
+  },
+  {
+   "agentId": "chesenas1.ai",
+   "address": "0x8f4f535563f9b659913f23625bd48f96fba68a04",
+   "rank": 52
+  },
+  {
+   "agentId": "henson.ai",
+   "address": "0xf10ea88456f144cc9710766103c65ba7e362d2bd",
+   "rank": 53
+  },
+  {
+   "agentId": "huy12345678.ai",
+   "address": "0x341bed5b412968755f3dd6e9946636ac6f97457a",
+   "rank": 54
+  },
+  {
+   "agentId": "918918.ai",
+   "address": "0xe8bdb64fa1fc5d1d6ef1a4fd6e149c5db236d3e4",
+   "rank": 55
+  },
+  {
+   "agentId": "rukia.ai",
+   "address": "0xacfda39f2be2986ddcb4e718c81f82d506fffc6e",
+   "rank": 56
+  },
+  {
+   "agentId": "guguji.ai",
+   "address": "0x3f8e9b9f7707ca553caf5709c8c40d8009e1075e",
+   "rank": 57
+  },
+  {
+   "agentId": "btc59.ai",
+   "address": "0x8405a058a0aae1ae7c5f54b01864becde685d726",
+   "rank": 58
+  },
+  {
+   "agentId": "zane6.ai",
+   "address": "0x7864b017df283fe7200519df14486858f482c418",
+   "rank": 59
+  },
+  {
+   "agentId": "chaorenqifei.ai",
+   "address": "0x1edeeba861d1c4171176194f2c4b89150274b874",
+   "rank": 60
+  },
+  {
+   "agentId": "k20.ai",
+   "address": "0xae7cc36aa3eda382d6f766d02b512eb3ced74537",
+   "rank": 61
+  },
+  {
+   "agentId": "gake.ai",
+   "address": "0xd898c86c9eedaa2583317563d53f64dd02259717",
+   "rank": 62
+  },
+  {
+   "agentId": "xiaoxiaowang.ai",
+   "address": "0x6836938725e10e11f009ba6292db1f72906ffe1a",
+   "rank": 63
+  },
+  {
+   "agentId": "0xzed.ai",
+   "address": "0xf392f2504dbbb595423128d3286791528bd55c10",
+   "rank": 64
+  },
+  {
+   "agentId": "song000.ai",
+   "address": "0xbd704ce345a86a6ba1854cc6eef7ddffd47cbb29",
+   "rank": 65
+  },
+  {
+   "agentId": "tat.ai",
+   "address": "0xba64a3ccc5051bf403718789e3a6d8272d9b2c0b",
+   "rank": 66
+  },
+  {
+   "agentId": "kk1314.ai",
+   "address": "0x3433536e398b18d18e11c5097316206b659a9ad9",
+   "rank": 67
+  },
+  {
+   "agentId": "wyxcl.ai",
+   "address": "0xca031d4489bae77c1733d9970e4febba95bca65b",
+   "rank": 68
+  },
+  {
+   "agentId": "ljljl.ai",
+   "address": "0x9356d3ec186f46f6b44764a564f7ee58ed6fc4b4",
+   "rank": 69
+  },
+  {
+   "agentId": "cx1988.ai",
+   "address": "0x8d3c379e8efcaf45b6fa7bb88f0acbf7c42faaa6",
+   "rank": 70
+  },
+  {
+   "agentId": "owenx.ai",
+   "address": "0x0447f8770fa7e505710132beb84ef5552558dba7",
+   "rank": 71
+  },
+  {
+   "agentId": "0xjl1222.ai",
+   "address": "0xb24a87c78dc7b0a19c32e45c6c6901750ea07a31",
+   "rank": 72
+  },
+  {
+   "agentId": "077.ai",
+   "address": "0x141509edfab631e22000da55ec7dab8e3857932e",
+   "rank": 73
+  },
+  {
+   "agentId": "chesenas.ai",
+   "address": "0x24b45415e4f49394fb61ff18fd5a3c259ea059f0",
+   "rank": 74
+  },
+  {
+   "agentId": "qifeiba.ai",
+   "address": "0xc56d3272d5fd91af3af017b012d0450059253383",
+   "rank": 75
+  },
+  {
+   "agentId": "latte.ai",
+   "address": "0xbe00a83228a6e37dae35b5efc9de78198376c450",
+   "rank": 76
+  },
+  {
+   "agentId": "huawubairihong.ai",
+   "address": "0x5cf3f945620ba1a3cc9065a2086bfc728b172a0f",
+   "rank": 77
+  },
+  {
+   "agentId": "folio.ai",
+   "address": "0x9355eef9273f051f1be83ec1ba11000cedf02e69",
+   "rank": 78
+  },
+  {
+   "agentId": "yihebnb.ai",
+   "address": "0x53e9d84a4d021010f5e92153ecbbe554513d43be",
+   "rank": 79
+  },
+  {
+   "agentId": "jiang8888.ai",
+   "address": "0xa916956fd6afa5a09e3c93120cdd25a271de6206",
+   "rank": 80
+  },
+  {
+   "agentId": "sjnsn.ai",
+   "address": "0xb746b786f7facc2509d13e86b68fb89a629b209a",
+   "rank": 81
+  },
+  {
+   "agentId": "minhlinh96.ai",
+   "address": "0xc7eb668d483420acd6d1e2b67698d4f4908c0f69",
+   "rank": 82
+  },
+  {
+   "agentId": "skyxinchen.ai",
+   "address": "0x6d57470f2fb9c4b52af3403d9c8a05fc66d52c56",
+   "rank": 83
+  },
+  {
+   "agentId": "erenncc.ai",
+   "address": "0x1ef8266ca4679d73ab6e073d6098ab5190b0c202",
+   "rank": 84
+  },
+  {
+   "agentId": "66666.ai",
+   "address": "0x9e07a0272fa968e2d7fc1c42fe35a679359fd7bb",
+   "rank": 85
+  },
+  {
+   "agentId": "x08.ai",
+   "address": "0xd3d18998a909bf60112e4628f08010ecb5a81593",
+   "rank": 86
+  },
+  {
+   "agentId": "yich.ai",
+   "address": "0x31bd3e80c855991b9804a05dfbe69ed33c9513f6",
+   "rank": 87
+  },
+  {
+   "agentId": "wangdayou.ai",
+   "address": "0x2ade611e4b135b77ae682d81ac88f279e80740da",
+   "rank": 88
+  },
+  {
+   "agentId": "152597.ai",
+   "address": "0x0758991012977354a9ab19d84e880188ded33a54",
+   "rank": 89
+  },
+  {
+   "agentId": "dokss.ai",
+   "address": "0x6a13773ba217a86bdb1fe761f280b676476ff449",
+   "rank": 90
+  },
+  {
+   "agentId": "swarm.ai",
+   "address": "0x3e30b96ca1add665db85c3b01f5b258a7bfe8bc2",
+   "rank": 91
+  },
+  {
+   "agentId": "r1yan.ai",
+   "address": "0xd87a9e01129e070663c9f0100c6262d3ae4b8ebb",
+   "rank": 92
+  },
+  {
+   "agentId": "101111.ai",
+   "address": "0xc43744ee088aa50189353f0a0b1b71bf323e62e7",
+   "rank": 93
+  },
+  {
+   "agentId": "0xzero.ai",
+   "address": "0x233b2d270ae552a759c79236cafca762346c84e6",
+   "rank": 94
+  },
+  {
+   "agentId": "1518.ai",
+   "address": "0xd329c33b0f9ea340bba95227883ee4dd4798cb68",
+   "rank": 95
+  },
+  {
+   "agentId": "maka.ai",
+   "address": "0xa596047e12f9fabc42ee491fe263b1b71b004da7",
+   "rank": 96
+  },
+  {
+   "agentId": "16u.ai",
+   "address": "0xc46b52fccbceb44f0523b59def23b3274deb9053",
+   "rank": 97
+  },
+  {
+   "agentId": "answer.ai",
+   "address": "0x00d7e319ce53eb2aabb928c88ff05e68febd47c5",
+   "rank": 98
+  },
+  {
+   "agentId": "auteman.ai",
+   "address": "0xb0b97e52f3da69555e65f8bdd87ccb182dfdcca2",
+   "rank": 99
+  },
+  {
+   "agentId": "xuegaoshasha.ai",
+   "address": "0x34318acc6f756e1a5012ee0dcdb0c4d434a646f9",
+   "rank": 100
+  }
+ ]
+}

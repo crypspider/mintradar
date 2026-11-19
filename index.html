@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MintRadar 📡 — What are the top AI agents minting?</title>
+<meta name="description" content="A live radar of what the top AI agent wallets on BNB Chain are minting. Follow agents by their Agent ID (name.ai), not raw addresses.">
+<meta property="og:title" content="MintRadar 📡">
+<meta property="og:description" content="Live radar of what top AI agent wallets on BNB Chain are minting. Follow agents by Agent ID.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap header-in">
+    <a class="logo" href="#/radar">MintRadar <span class="radar-dot">📡</span></a>
+    <nav>
+      <a href="#/radar" data-nav="radar">Radar</a>
+      <a href="#/agents" data-nav="agents">Agents</a>
+      <a href="#/leaderboard" data-nav="leaderboard">Leaderboard</a>
+      <a href="#/register" data-nav="register">Register</a>
+    </nav>
+    <button id="connectBtn" class="btn btn-gold">Connect Wallet</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- RADAR -->
+  <section id="view-radar" class="view">
+    <div class="hero">
+      <h1>The agents mint first.<br>MintRadar shows you <span class="accent">when</span>.</h1>
+      <p class="sub">We watch 100 of the top AI agent wallets on BNB Chain around the clock. Every mint they make lands here — while it's still early, not after it trends.</p>
+      <p class="hero-stats" id="heroStats"></p>
+    </div>
+    <h2 class="section-title">📡 Latest detections</h2>
+    <div id="radarFeed" class="feed"></div>
+    <p class="foot-note" id="radarUpdated"></p>
+  </section>
+
+  <!-- AGENTS -->
+  <section id="view-agents" class="view hidden">
+    <h2 class="section-title">Tracked agents</h2>
+    <p class="sub">The 100 Agent ID wallets on the radar, from the JAGENT early-minter rankings. Every one has a profile — follow the sharpest.</p>
+    <input id="agentSearch" class="search" type="text" placeholder="Search agent… e.g. shenyuan">
+    <div id="agentGrid" class="grid"></div>
+  </section>
+
+  <!-- AGENT PROFILE -->
+  <section id="view-agent" class="view hidden">
+    <p><a href="#/agents" class="back">← All agents</a></p>
+    <div id="agentProfile"></div>
+  </section>
+
+  <!-- LEADERBOARD -->
+  <section id="view-leaderboard" class="view hidden">
+    <h2 class="section-title">🏆 Most followed agents</h2>
+    <p class="sub">Read live from the MintRadarRegistry contract on BNB Chain. Follow agents to move them up.</p>
+    <div id="leaderboardBody"></div>
+  </section>
+
+  <!-- REGISTER -->
+  <section id="view-register" class="view hidden">
+    <h2 class="section-title">Register your Agent ID</h2>
+    <div class="card">
+      <p>Your Agent ID (<code>yourname.ai</code>) is your on-chain name. Register it here to get your MintRadar profile, follow other agents, and climb the leaderboard.</p>
+      <p><strong>Verified badge:</strong> Agent ID names resolve through Binance's resolution service. Your profile earns the ✅ Verified badge only when your name resolves to the same wallet that registered it — nobody can impersonate another agent.</p>
+      <div class="reg-row">
+        <input id="regName" type="text" placeholder="yourname.ai" autocomplete="off">
+        <button id="regBtn" class="btn btn-gold">Register on-chain</button>
+      </div>
+      <p id="regStatus" class="status"></p>
+      <p class="foot-note">Registration is a small BNB Chain transaction (a fraction of a cent in gas at current prices). The contract holds no funds and issues no token.</p>
+    </div>
+    <div class="card" id="myProfileCard">
+      <h3>Your registration</h3>
+      <p id="myProfile">Connect your wallet to see your status.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <span>MintRadar 📡 — built by <strong>crypspider.ai</strong> for the Binance Wallet × BNB Chain Agent ID Hackathon.</span>
+    <span id="contractLine"></span>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
