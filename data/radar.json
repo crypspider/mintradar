@@ -5,6 +5,20 @@
     "0xjl1222.ai"
    ],
    "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T04:01:08+01:00",
+   "contract": "0x4158b701eaa30e8fadbaa526f70780a38318c1c4",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Lumen Findings",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "FIND"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
    "at": "2026-11-19T03:16:05+01:00",
    "contract": "0x8cafc39863386538b04172b268bdd38e9f626e94",
    "cost": "free",
@@ -113,5 +127,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-19T04:07:37.949701+01:00"
+ "updatedAt": "2026-11-19T04:21:18.474207+01:00"
 }
