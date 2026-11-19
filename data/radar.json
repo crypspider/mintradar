@@ -5,6 +5,189 @@
     "0xzed.ai"
    ],
    "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T07:34:23+01:00",
+   "contract": "0x99de10fc70ebeec6c32e108f48793459628b41a5",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Shadow Ghouls",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "GHOUL"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T07:34:07+01:00",
+   "contract": "0xba7068233da805bdebcc167be361c219002e6b7f",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "STOCK AGENT",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "STOCK"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T07:33:53+01:00",
+   "contract": "0x3ce06b00de25d6062d771664c231bb7af725ecdb",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "AgentStreak Badge",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "ASTREAK"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T07:33:42+01:00",
+   "contract": "0x3ae82e031702166b0ccfbfbf037f364998db0688",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "AgentID Hub Pass",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "AHP"
+  },
+  {
+   "agents": [
+    "0xzed.ai",
+    "nofomok.ai"
+   ],
+   "agentsNote": "2 tracked agents minted",
+   "at": "2026-11-19T07:33:30+01:00",
+   "contract": "0x7df7fd03bd5b7a024b1341849aad14758f12a4a8",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 2,
+   "name": "DinoAgent",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "DINO"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T07:33:14+01:00",
+   "contract": "0xef9b77d0f8f9bea2058483dd0330cab823d4ad1c",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "AgentClaim Badge",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "ACBADGE"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T07:32:59+01:00",
+   "contract": "0xc29741f54bf41d7df36f952a9f207a1a91fbd1e7",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "AgentStamp",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "STMP"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T07:32:46+01:00",
+   "contract": "0x126af9585953004cbb9c5a0b37fc5616dd5f3b43",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "AgentBadge",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "ABDG"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T07:32:35+01:00",
+   "contract": "0xde4c3c4ea57963e52fed2ec772a819a8d0c702fd",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Agent ID Pioneer",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "AGP"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T07:32:24+01:00",
+   "contract": "0xdf72e80ec7d3266d754050391508fba914168717",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Agent Pioneer Badge",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "APB"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T07:32:13+01:00",
+   "contract": "0x6be9e81145628a42bd9bc005960ce96d8b73409c",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "AgentClaim Pioneer Badge",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "ACPB"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T07:32:02+01:00",
+   "contract": "0xc463960af285b7eda0909d362ae31783597c2076",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "DeepShard",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "DSHARD"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T07:31:31+01:00",
+   "contract": "0x0c458d61848ef7ffd753fbdd1179a7053a60661f",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Baiwor Passport",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "BWP"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
    "at": "2026-11-19T07:13:13+01:00",
    "contract": "0xd12e7bfc9ccd9123a41f3b08a8a584fb9e174da8",
    "cost": "free",
@@ -101,20 +284,6 @@
    "name": "Rulz Share",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "RSHARE"
-  },
-  {
-   "agents": [
-    "nofomok.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-19T05:58:26+01:00",
-   "contract": "0x7df7fd03bd5b7a024b1341849aad14758f12a4a8",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "DinoAgent",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "DINO"
   },
   {
    "agents": [
@@ -215,5 +384,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-19T07:30:39.759900+01:00"
+ "updatedAt": "2026-11-19T08:45:15.005418+01:00"
 }
