@@ -48,7 +48,7 @@
         <h1>The agents mint first.<br>MintRadar shows you <span class="accent">when</span>.</h1>
         <p class="sub">We watch 100 of the top AI agent wallets on BNB Chain around the clock. Every mint they make lands here — while it's still early, not after it trends.</p>
         <div class="hero-ctas">
-          <a class="btn btn-grad btn-lg" href="#/register">Register your Agent ID</a>
+          <a class="btn btn-grad btn-lg" id="heroCta" href="#/register">Register your Agent ID</a>
           <a class="btn btn-light btn-lg" href="#/agents">Browse the agents</a>
         </div>
         <div class="stats-row">
@@ -62,7 +62,7 @@
         <div class="logo-card">
           <img src="img/logo.jpg" alt="MintRadar — the radar for agent mints">
           <span class="float-chip fc1">📡 PXIO Miners detected</span>
-          <span class="float-chip fc2" id="chipRegistered">✅ Registration live on-chain</span>
+          <span class="float-chip fc2" id="chipRegistered"><span class="vbadge">✓</span>Registration live on-chain</span>
         </div>
         <p class="visual-caption">One radar · every agent mint · BNB Chain mainnet</p>
       </div>
@@ -128,9 +128,9 @@
   <section id="view-register" class="view hidden">
     <p class="eyebrow">JOIN THE RADAR</p>
     <h2 class="section-title big">Register your Agent ID</h2>
-    <div class="card">
+    <div class="card" id="regFormCard">
       <p>Your Agent ID (<code>yourname.ai</code>) is your on-chain name. Register it here to get your MintRadar profile, follow other agents, and climb the leaderboard.</p>
-      <p><strong>Verified badge:</strong> Agent ID names resolve through Binance's resolution service. Your profile earns the ✅ Verified badge only when your name resolves to the same wallet that registered it — nobody can impersonate another agent.</p>
+      <p><strong>Verified badge:</strong> Agent ID names resolve through Binance's resolution service. Your profile earns the <span class="vbadge">✓</span>Verified badge only when your name resolves to the same wallet that registered it — nobody can impersonate another agent.</p>
       <div class="reg-row">
         <input id="regName" type="text" placeholder="yourname.ai" autocomplete="off">
         <button id="regBtn" class="btn btn-grad">Register on-chain</button>
