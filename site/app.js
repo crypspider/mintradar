@@ -20,7 +20,13 @@ const short = (a) => a.slice(0, 6) + "…" + a.slice(-4);
 const state = { agents: [], radar: null, wallet: null, signer: null, contract: null, readContract: null, radarQuery: "", radarFilter: "all" };
 
 function readProvider() {
-  return new ethers.JsonRpcProvider(CFG.BSC_RPC);
+  // Several public BSC endpoints behind a fallback provider: if one is
+  // rate-limiting or refusing (the original single endpoint started
+  // returning 403s), reads quietly move to the next instead of erroring.
+  const urls = (CFG.BSC_RPCS && CFG.BSC_RPCS.length) ? CFG.BSC_RPCS : [CFG.BSC_RPC];
+  const providers = urls.map((u) => new ethers.JsonRpcProvider(u, CFG.BSC_CHAIN_ID, { staticNetwork: true }));
+  if (providers.length === 1) return providers[0];
+  return new ethers.FallbackProvider(providers, CFG.BSC_CHAIN_ID, { quorum: 1 });
 }
 function getReadContract() {
   if (!CFG.CONTRACT_ADDRESS) return null;
@@ -231,7 +237,7 @@ async function renderAgentProfile(agentId) {
 }
 
 // ---------- leaderboard ----------
-async function renderLeaderboard() {
+async function renderLeaderboard(retried) {
   const body = $("leaderboardBody");
   const c = getReadContract();
   if (!c) {
@@ -254,6 +260,10 @@ async function renderLeaderboard() {
     }</tbody></table>`;
     hydrateFollowUI();
   } catch {
+    if (!retried) {
+      await new Promise((r) => setTimeout(r, 1500));
+      return renderLeaderboard(true);
+    }
     body.innerHTML = `<div class="card">Could not read the contract right now. Try again in a moment.</div>`;
   }
 }
