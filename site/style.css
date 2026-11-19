@@ -210,3 +210,26 @@ footer{border-top:1px solid var(--line);padding:20px 0 30px;color:var(--muted);f
 .foot-brand{display:inline-flex;align-items:center;gap:9px}
 .foot-logo{width:26px;height:26px;border-radius:7px;object-fit:cover;border:1px solid var(--line)}
 footer strong{color:var(--text2)}
+
+/* ---------- modals / wallet picker / mint ---------- */
+.modal{position:fixed;inset:0;z-index:60;background:rgba(14,21,38,.5);backdrop-filter:blur(4px);display:flex;align-items:flex-end;justify-content:center}
+.modal.hidden{display:none}
+@media(min-width:640px){.modal{align-items:center;padding:20px}}
+.modal-card{background:#fff;border-radius:20px 20px 0 0;width:100%;max-width:440px;max-height:88vh;overflow:auto;padding:22px;box-shadow:var(--shadow-lg)}
+@media(min-width:640px){.modal-card{border-radius:20px}}
+.modal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.modal-head h3{margin:0;font-size:19px}
+.modal-x{border:1px solid var(--line2);background:#fff;width:32px;height:32px;border-radius:50%;font-size:17px;cursor:pointer;color:var(--text2);line-height:1;flex:none}
+.wallet-list{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.wallet-row{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line2);border-radius:14px;padding:12px 14px;cursor:pointer;font-family:var(--font-body);font-size:15px;font-weight:700;color:var(--ink);transition:.15s}
+.wallet-row:hover{border-color:var(--violet);box-shadow:var(--shadow-sm)}
+.wallet-row img{width:28px;height:28px;border-radius:8px}
+.wallet-ico{width:28px;height:28px;border-radius:8px;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex:none}
+.wallet-row .wsub{margin-left:auto;color:var(--muted);font-size:12px;font-weight:600}
+.mint-kv{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.mint-kv span:first-child{color:var(--muted)}
+.mint-qty{display:flex;align-items:center;gap:12px;margin:14px 0}
+.qty-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--line2);background:#fff;font-size:18px;font-weight:800;cursor:pointer;color:var(--ink);line-height:1}
+.qty-num{font-family:var(--font-display);font-size:20px;font-weight:700;min-width:34px;text-align:center}
+.mint-status{font-weight:600;margin-top:12px;min-height:20px}
+.mint-status.ok{color:var(--green)} .mint-status.err{color:var(--red)}
