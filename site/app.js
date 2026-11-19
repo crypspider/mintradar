@@ -74,7 +74,7 @@ function renderRadar() {
         const count = Number(n);
         $("statRegistered").textContent = count;
         const chip = $("chipRegistered");
-        if (chip) chip.textContent = "✅ " + count + (count === 1 ? " agent" : " agents") + " registered on-chain";
+        if (chip) chip.innerHTML = '<span class="vbadge">✓</span>' + count + (count === 1 ? " agent" : " agents") + " registered on-chain";
       })
       .catch(() => { $("statRegistered").textContent = "–"; });
   }
@@ -175,7 +175,7 @@ async function renderAgentProfile(agentId) {
         <span class="followers" data-fcount="${a.address}">… followers</span>
         <button class="btn btn-gold" data-follow="${a.address}">Follow</button>
       </div>
-      <p class="foot-note">✅ Verified means this Agent ID resolves through Binance's resolution service to the address that registered it on MintRadar.</p>
+      <p class="foot-note"><span class="vbadge">✓</span>Verified means this Agent ID resolves through Binance's resolution service to the address that registered it on MintRadar.</p>
     </div>
     <div class="card"><h3>Recent radar detections</h3><div id="profEvents"></div></div>`;
   const evBox = $("profEvents");
@@ -189,7 +189,7 @@ async function renderAgentProfile(agentId) {
     try {
       const regAddr = await c.addressOfName(ethers.keccak256(ethers.toUtf8Bytes(a.agentId.toLowerCase())));
       if (regAddr !== ethers.ZeroAddress && regAddr.toLowerCase() === a.address.toLowerCase()) {
-        $("profBadge").textContent = "✅ Verified Agent";
+        $("profBadge").innerHTML = '<span class="vbadge">✓</span>Verified Agent';
       }
     } catch { /* read failed; leave unbadged */ }
   }
@@ -233,7 +233,7 @@ async function renderMyProfile() {
   const name = await c.agentIdOf(state.wallet);
   if (name) {
     const [followers, following] = await Promise.all([c.followerCount(state.wallet), c.followingCount(state.wallet)]);
-    el.innerHTML = `You are registered as <b>${name}</b> ✅ · ${Number(followers)} follower${Number(followers) === 1 ? "" : "s"} · following ${Number(following)} · <a href="#/leaderboard">View the leaderboard</a>`;
+    el.innerHTML = `You are registered as <b>${name}</b> <span class="vbadge">✓</span> · ${Number(followers)} follower${Number(followers) === 1 ? "" : "s"} · following ${Number(following)} · <a href="#/leaderboard">View the leaderboard</a>`;
   } else {
     el.textContent = "This wallet has not registered an Agent ID yet.";
   }
@@ -252,8 +252,9 @@ $("regBtn").addEventListener("click", async () => {
     const tx = await state.contract.register(name);
     await tx.wait();
     status.className = "status ok";
-    status.textContent = `Registered ✅ — ${name} is now bound to your wallet on BNB Chain.`;
+    status.textContent = `Registered — ${name} is now bound to your wallet on BNB Chain.`;
     renderMyProfile();
+    refreshConnectLabel();
   } catch {
     status.className = "status err";
     status.textContent = "Registration failed or was rejected. The name may be taken, or the wallet is not on BNB Chain.";
@@ -262,14 +263,32 @@ $("regBtn").addEventListener("click", async () => {
 
 // ---------- wallet ----------
 async function refreshConnectLabel() {
-  if (!state.wallet) { $("connectBtn").textContent = "Connect Wallet"; return; }
+  const navReg = document.querySelector('[data-nav="register"]');
+  const heroCta = $("heroCta");
+  const formCard = $("regFormCard");
+  if (!state.wallet) {
+    $("connectBtn").textContent = "Connect Wallet";
+    if (navReg) navReg.textContent = "Register";
+    if (heroCta) { heroCta.textContent = "Register your Agent ID"; heroCta.setAttribute("href", "#/register"); }
+    if (formCard) formCard.classList.remove("hidden");
+    return;
+  }
   $("connectBtn").textContent = short(state.wallet);
   try {
     const c = getReadContract();
     if (!c) return;
     const name = await c.agentIdOf(state.wallet);
-    if (name) $("connectBtn").textContent = "✅ " + name;
-  } catch { /* keep the address label */ }
+    if (name) {
+      $("connectBtn").innerHTML = '<span class="vbadge">✓</span>' + name;
+      if (navReg) navReg.textContent = "My Agent";
+      if (heroCta) { heroCta.textContent = "View my agent profile"; heroCta.setAttribute("href", "#/agent/" + state.wallet); }
+      if (formCard) formCard.classList.add("hidden");
+    } else {
+      if (navReg) navReg.textContent = "Register";
+      if (heroCta) { heroCta.textContent = "Register your Agent ID"; heroCta.setAttribute("href", "#/register"); }
+      if (formCard) formCard.classList.remove("hidden");
+    }
+  } catch { /* keep the defaults */ }
 }
 
 async function connectWallet() {
