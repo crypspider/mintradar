@@ -160,6 +160,23 @@
   </div>
 </footer>
 
+<!-- WALLET PICKER -->
+<div id="walletModal" class="modal hidden" role="dialog" aria-modal="true">
+  <div class="modal-card">
+    <div class="modal-head"><h3>Connect a wallet</h3><button class="modal-x" data-close-modal aria-label="Close">×</button></div>
+    <div id="walletList" class="wallet-list"></div>
+    <p class="foot-note">MintRadar works with any wallet your browser can connect — MetaMask, Trust Wallet, Binance Wallet, Coinbase Wallet and more. Your keys never leave your wallet; it signs everything itself.</p>
+  </div>
+</div>
+
+<!-- MINT -->
+<div id="mintModal" class="modal hidden" role="dialog" aria-modal="true">
+  <div class="modal-card">
+    <div class="modal-head"><h3 id="mintTitle">Mint</h3><button class="modal-x" data-close-modal aria-label="Close">×</button></div>
+    <div id="mintBody"></div>
+  </div>
+</div>
+
 <script src="config.js"></script>
 <script type="module" src="app.js"></script>
 </body>
