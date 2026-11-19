@@ -210,7 +210,7 @@ async function renderAgentProfile(agentId) {
     <div class="card">
       <div class="arank">${eyebrow}</div>
       <h2 style="margin:6px 0">${name} <span class="badge-verified" id="profBadge"></span></h2>
-      <p class="aaddr">${address} · <a href="https://bscscan.com/address/${address}" target="_blank" rel="noopener">BscScan</a></p>
+      <p class="aaddr">${address} · <a href="https://bscscan.com/address/${address}" target="_blank" rel="noopener">Wallet &amp; holdings on BscScan ↗</a></p>
       <div class="row" style="display:flex;gap:18px;align-items:center">
         <span class="followers" data-fcount="${address}">… followers</span>
         <button class="btn btn-gold" data-follow="${address}">Follow</button>
@@ -414,6 +414,17 @@ document.querySelectorAll("[data-rfilter]").forEach((btn) => {
     document.querySelectorAll("[data-rfilter]").forEach((b) => b.classList.toggle("active", b === btn));
     state.radarFilter = btn.dataset.rfilter;
     renderRadar();
+  });
+});
+document.querySelectorAll("[data-gofilter]").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const f = link.dataset.gofilter;
+    state.radarFilter = f;
+    document.querySelectorAll("[data-rfilter]").forEach((b) => b.classList.toggle("active", b.dataset.rfilter === f));
+    renderRadar();
+    const head = $("feedHead");
+    if (head) head.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
 
