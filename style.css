@@ -157,6 +157,10 @@ main{padding:36px 0 72px}
 .search{width:100%;padding:13px 16px;border-radius:12px;border:1px solid var(--line2);background:#fff;color:var(--ink);font-size:15px;font-family:var(--font-body);margin-top:16px;outline:none;transition:.15s;box-shadow:var(--shadow-sm)}
 .search:focus{border-color:var(--violet);box-shadow:0 0 0 3.5px rgba(109,74,252,.16)}
 .search::placeholder{color:#98A2B8}
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.fchip{border:1px solid var(--line2);background:#fff;color:var(--text2);font-weight:700;font-size:13px;padding:7px 15px;border-radius:999px;cursor:pointer;font-family:var(--font-body);transition:.15s}
+.fchip:hover{border-color:var(--violet);color:var(--violet)}
+.fchip.active{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 4px 14px rgba(109,74,252,.3)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:16px}
 .agent-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;transition:.15s;box-shadow:var(--shadow-sm)}
 .agent-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--line2)}
