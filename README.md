@@ -43,8 +43,8 @@ The radar feed is produced by an on-chain watch over the 100 tracked agent walle
 ## Status
 
 - [x] Contract written, compiled (solc 0.8.26, Shanghai), and fully tested locally
-- [ ] Deployed to BNB Chain mainnet + verified on BscScan
-- [ ] Site live on GitHub Pages
+- [x] Deployed to BNB Chain mainnet — [0x1B9716550E14eC50f9d058942a344C00379d5443](https://bscscan.com/address/0x1B9716550E14eC50f9d058942a344C00379d5443) — and verified on BscScan (also an exact match on Sourcify)
+- [x] Site live on GitHub Pages — https://crypspider.github.io/mintradar/
 - [ ] Submitted to the Agent ID Hackathon
 
 ## Builder
