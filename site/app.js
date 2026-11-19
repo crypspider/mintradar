@@ -17,7 +17,35 @@ const REGISTRY_ABI = [
 
 const $ = (id) => document.getElementById(id);
 const short = (a) => a.slice(0, 6) + "…" + a.slice(-4);
-const state = { agents: [], radar: null, wallet: null, signer: null, contract: null, readContract: null, radarQuery: "", radarFilter: "all" };
+const state = { agents: [], radar: null, wallet: null, signer: null, contract: null, readContract: null, radarQuery: "", radarFilter: "all", eip1193: null, providerName: "" };
+
+// ---------- wallet discovery (EIP-6963) ----------
+// Modern wallets announce themselves to the page; we collect every one so
+// the visitor picks whichever wallet their browser carries — nothing is
+// hardcoded to a single wallet brand.
+const discoveredWallets = new Map();
+window.addEventListener("eip6963:announceProvider", (e) => {
+  const d = e.detail;
+  if (d && d.provider && d.info) discoveredWallets.set(d.info.uuid, d);
+});
+window.dispatchEvent(new Event("eip6963:requestProvider"));
+
+function candidateProviders() {
+  const list = [];
+  const seen = new Set();
+  const push = (provider, name, icon) => {
+    if (!provider || seen.has(provider)) return;
+    seen.add(provider);
+    list.push({ provider, name, icon });
+  };
+  if (state.eip1193) push(state.eip1193, state.providerName || "Connected wallet");
+  for (const d of discoveredWallets.values()) push(d.provider, d.info.name, d.info.icon);
+  if (window.ethereum) {
+    const pool = Array.isArray(window.ethereum.providers) ? window.ethereum.providers : [window.ethereum];
+    for (const p of pool) push(p, p.isMetaMask ? "MetaMask" : p.isTrust ? "Trust Wallet" : p.isCoinbaseWallet ? "Coinbase Wallet" : "Browser wallet");
+  }
+  return list;
+}
 
 function readProvider() {
   // Several public BSC endpoints behind a fallback provider: if one is
@@ -89,9 +117,14 @@ function renderRadar() {
       <p class="event-note">${ev.note}</p>
       ${agentLinks ? `<div class="event-agents">Tracked agents in: ${agentLinks}${ev.agentsNote ? " · " + ev.agentsNote : ""}</div>` : (ev.agentsNote ? `<div class="event-agents">${ev.agentsNote}</div>` : "")}
       <div class="event-actions">
-        <a class="btn btn-grad btn-sm" href="https://bscscan.com/address/${ev.contract}#writeContract" target="_blank" rel="noopener">Mint it yourself ↗</a>
+        ${ev.cost === "free"
+          ? `<button class="btn btn-grad btn-sm" data-mint="${ev.contract}">Mint in your wallet</button>
+             <a class="btn btn-ghost btn-sm" href="https://bscscan.com/address/${ev.contract}#writeContract" target="_blank" rel="noopener">BscScan ↗</a>`
+          : `<a class="btn btn-grad btn-sm" href="https://bscscan.com/address/${ev.contract}#writeContract" target="_blank" rel="noopener">Mint it yourself ↗</a>`}
         <button class="btn btn-ghost btn-sm" data-copy="${ev.contract}">Copy contract</button>
-        <p class="event-agent-note">Agent ID wallet? It can't connect on BscScan — copy the contract and give it to your agent to mint for you.</p>
+        <p class="event-agent-note">${ev.cost === "free"
+          ? "Free mint — mint it right here into any wallet your browser can connect, or copy the contract and give it to your agent to mint for you."
+          : "Paid mint — the price is set by the contract itself. Check it on BscScan before you buy, or ask your agent to check it first."}</p>
       </div>
     `;
     feed.appendChild(div);
@@ -101,6 +134,8 @@ function renderRadar() {
       catch (e) { copyBtn.textContent = "Copy failed — use the address link above"; }
       setTimeout(() => { copyBtn.textContent = "Copy contract"; }, 2000);
     });
+    const mintBtn = div.querySelector("[data-mint]");
+    if (mintBtn) mintBtn.addEventListener("click", () => openMint(ev));
   }
   $("radarUpdated").textContent = "Source: " + state.radar.source + " · Last updated " + fmtDate(state.radar.updatedAt);
   $("statEvents").textContent = state.radar.events.length;
@@ -346,51 +381,15 @@ async function refreshConnectLabel() {
   } catch { /* keep the defaults */ }
 }
 
-async function connectWallet() {
-  if (!window.ethereum) { alert("No wallet found. Open MintRadar in your wallet's browser (e.g. Binance Wallet) or a browser with a Web3 wallet extension."); return; }
-  try {
-    const provider = new ethers.BrowserProvider(window.ethereum);
-    const network = await provider.getNetwork();
-    if (Number(network.chainId) !== CFG.BSC_CHAIN_ID) {
-      await window.ethereum.request({ method: "wallet_switchEthereumChain", params: [{ chainId: "0x38" }] });
-    }
-    state.signer = await provider.getSigner();
-    state.wallet = await state.signer.getAddress();
-    if (CFG.CONTRACT_ADDRESS) state.contract = new ethers.Contract(CFG.CONTRACT_ADDRESS, REGISTRY_ABI, state.signer);
-    refreshConnectLabel();
-    hydrateFollowUI();
-    renderMyProfile();
-  } catch { /* user rejected */ }
-}
-$("connectBtn").addEventListener("click", connectWallet);
+function closeModals() { for (const m of document.querySelectorAll(".modal")) m.classList.add("hidden"); }
+document.querySelectorAll("[data-close-modal]").forEach((b) => b.addEventListener("click", closeModals));
+document.querySelectorAll(".modal").forEach((m) => m.addEventListener("click", (e) => { if (e.target === m) closeModals(); }));
 
-// Silently reconnect a wallet that already authorised this site, so a
-// returning user immediately sees their registered agent — no "login" hunt.
-// The address alone drives the display (name, profile, follow state); the
-// signer is attached when the chain is right, and any action that needs to
-// sign will complete the connection on demand.
-async function autoReconnect() {
-  if (!window.ethereum || state.wallet) return;
-  try {
-    const accounts = await window.ethereum.request({ method: "eth_accounts" });
-    if (!accounts || !accounts.length) return;
-    state.wallet = accounts[0];
-    try {
-      const chainId = await window.ethereum.request({ method: "eth_chainId" });
-      if (parseInt(chainId, 16) === CFG.BSC_CHAIN_ID) {
-        const provider = new ethers.BrowserProvider(window.ethereum);
-        state.signer = await provider.getSigner();
-        state.wallet = await state.signer.getAddress();
-        if (CFG.CONTRACT_ADDRESS) state.contract = new ethers.Contract(CFG.CONTRACT_ADDRESS, REGISTRY_ABI, state.signer);
-      }
-    } catch { /* display-only connection is fine */ }
-    refreshConnectLabel();
-    hydrateFollowUI();
-    renderMyProfile();
-  } catch { /* not authorised yet — the Connect button covers it */ }
-}
-if (window.ethereum && window.ethereum.on) {
-  window.ethereum.on("accountsChanged", (accounts) => {
+function attachProviderListeners(p) {
+  if (!p || !p.on || p.__mrListening) return;
+  p.__mrListening = true;
+  p.on("accountsChanged", (accounts) => {
+    if (state.eip1193 !== p) return;
     if (accounts && accounts.length) {
       state.wallet = accounts[0];
       refreshConnectLabel();
@@ -402,12 +401,258 @@ if (window.ethereum && window.ethereum.on) {
       renderMyProfile();
     }
   });
-  window.ethereum.on("chainChanged", () => { autoReconnect(); });
+  p.on("chainChanged", () => { if (state.eip1193 === p) autoReconnect(); });
+}
+
+async function ensureChain(p) {
+  const chainId = await p.request({ method: "eth_chainId" });
+  if (parseInt(chainId, 16) === CFG.BSC_CHAIN_ID) return;
+  try {
+    await p.request({ method: "wallet_switchEthereumChain", params: [{ chainId: "0x38" }] });
+  } catch (e) {
+    if (e && e.code === 4902) {
+      await p.request({ method: "wallet_addEthereumChain", params: [{ chainId: "0x38", chainName: "BNB Smart Chain", nativeCurrency: { name: "BNB", symbol: "BNB", decimals: 18 }, rpcUrls: ["https://bsc-dataseed2.binance.org"], blockExplorerUrls: ["https://bscscan.com"] }] });
+    } else throw e;
+  }
+}
+
+async function useProvider(entry) {
+  const p = entry.provider;
+  state.eip1193 = p;
+  state.providerName = entry.name;
+  attachProviderListeners(p);
+  await p.request({ method: "eth_requestAccounts" });
+  await ensureChain(p);
+  const provider = new ethers.BrowserProvider(p);
+  state.signer = await provider.getSigner();
+  state.wallet = await state.signer.getAddress();
+  if (CFG.CONTRACT_ADDRESS) state.contract = new ethers.Contract(CFG.CONTRACT_ADDRESS, REGISTRY_ABI, state.signer);
+  refreshConnectLabel();
+  hydrateFollowUI();
+  renderMyProfile();
+}
+
+function openWalletPicker(onPicked) {
+  const listEl = $("walletList");
+  const cands = candidateProviders();
+  listEl.innerHTML = "";
+  if (!cands.length) {
+    listEl.innerHTML = `<p class="sub">No wallet detected in this browser. Open MintRadar inside your wallet app's browser (Trust Wallet, MetaMask, Binance Wallet…), or install a wallet extension, then try again. Agent ID wallets can't connect to websites — give the contract to your agent instead.</p>`;
+  }
+  for (const c of cands) {
+    const b = document.createElement("button");
+    b.className = "wallet-row";
+    b.innerHTML = `${c.icon ? `<img src="${c.icon}" alt="">` : `<span class="wallet-ico">${(c.name || "W").slice(0, 1)}</span>`}<span>${c.name}</span><span class="wsub">Connect</span>`;
+    b.addEventListener("click", async () => {
+      closeModals();
+      try { await useProvider(c); if (onPicked) onPicked(); } catch { /* user rejected */ }
+    });
+    listEl.appendChild(b);
+  }
+  $("walletModal").classList.remove("hidden");
+}
+
+async function connectWallet(onPicked) {
+  if (state.signer && state.wallet) { if (onPicked) onPicked(); return; }
+  const cands = candidateProviders();
+  if (cands.length === 1) {
+    try { await useProvider(cands[0]); if (onPicked) onPicked(); } catch { /* user rejected */ }
+    return;
+  }
+  openWalletPicker(onPicked);
+}
+$("connectBtn").addEventListener("click", () => connectWallet());
+
+// Silently reconnect a wallet that already authorised this site, so a
+// returning user immediately sees their registered agent — no "login" hunt.
+// The address alone drives the display (name, profile, follow state); the
+// signer is attached when the chain is right, and any action that needs to
+// sign will complete the connection on demand.
+async function autoReconnect() {
+  if (state.wallet) return;
+  // Re-dispatch discovery in case a wallet announced itself after load.
+  window.dispatchEvent(new Event("eip6963:requestProvider"));
+  for (const c of candidateProviders()) {
+    try {
+      const accounts = await c.provider.request({ method: "eth_accounts" });
+      if (!accounts || !accounts.length) continue;
+      state.wallet = accounts[0];
+      state.eip1193 = c.provider;
+      state.providerName = c.name;
+      attachProviderListeners(c.provider);
+      try {
+        const chainId = await c.provider.request({ method: "eth_chainId" });
+        if (parseInt(chainId, 16) === CFG.BSC_CHAIN_ID) {
+          const provider = new ethers.BrowserProvider(c.provider);
+          state.signer = await provider.getSigner();
+          state.wallet = await state.signer.getAddress();
+          if (CFG.CONTRACT_ADDRESS) state.contract = new ethers.Contract(CFG.CONTRACT_ADDRESS, REGISTRY_ABI, state.signer);
+        }
+      } catch { /* display-only connection is fine */ }
+      refreshConnectLabel();
+      hydrateFollowUI();
+      renderMyProfile();
+      return;
+    } catch { /* try the next wallet */ }
+  }
 }
 // Mobile wallet browsers love dropping the connection when you move around;
 // re-check silently whenever the page comes back into view.
 window.addEventListener("pageshow", () => { autoReconnect(); });
 document.addEventListener("visibilitychange", () => { if (!document.hidden) autoReconnect(); });
+
+// ---------- in-site minting ----------
+// For FREE detections: the site reads the contract's verified ABI from
+// Sourcify, picks the public mint function, and test-calls it from the
+// visitor's own address first — a closed or gated mint fails the test
+// call and is never sent. Unverified contracts fall back to probing the
+// common mint signatures. The visitor's wallet signs; the mint lands
+// directly in that wallet.
+const mintSession = { ev: null, cand: null, qty: 1 };
+
+async function fetchAbi(address) {
+  try {
+    const r = await fetch(`https://sourcify.dev/server/v2/contract/56/${address}?fields=abi`);
+    if (!r.ok) return null;
+    const j = await r.json();
+    return Array.isArray(j.abi) ? j.abi : null;
+  } catch { return null; }
+}
+
+function mintCandidates(abi) {
+  const rank = (name) => {
+    const n = (name || "").toLowerCase();
+    if (n === "mint") return 0;
+    if (n.includes("mint")) return 1;
+    if (n.includes("claim")) return 2;
+    return 3;
+  };
+  const fromAbi = [];
+  if (abi) {
+    for (const f of abi) {
+      if (f.type !== "function") continue;
+      if (f.stateMutability === "view" || f.stateMutability === "pure") continue;
+      if (!/mint|claim/i.test(f.name || "")) continue;
+      const ins = f.inputs || [];
+      const okShape = ins.length === 0
+        || (ins.length === 1 && (ins[0].type === "address" || /^uint/.test(ins[0].type)))
+        || (ins.length === 2 && ins.some((i) => i.type === "address") && ins.some((i) => /^uint/.test(i.type)));
+      if (!okShape) continue;
+      fromAbi.push({
+        name: f.name,
+        inputs: ins.map((i) => i.type),
+        frag: `function ${f.name}(${ins.map((i) => i.type).join(",")})${f.stateMutability === "payable" ? " payable" : ""}`,
+      });
+    }
+  }
+  fromAbi.sort((a, b) => rank(a.name) - rank(b.name) || a.inputs.length - b.inputs.length);
+  const probes = [
+    { name: "mint", inputs: ["uint256"], frag: "function mint(uint256)" },
+    { name: "mint", inputs: [], frag: "function mint()" },
+    { name: "publicMint", inputs: ["uint256"], frag: "function publicMint(uint256)" },
+    { name: "mintFree", inputs: ["uint256"], frag: "function mintFree(uint256)" },
+    { name: "freeMint", inputs: ["uint256"], frag: "function freeMint(uint256)" },
+  ];
+  const seen = new Set(fromAbi.map((c) => c.frag));
+  return [...fromAbi, ...probes.filter((p) => !seen.has(p.frag))];
+}
+
+function candSig(cand) { return `${cand.name}(${cand.inputs.join(",")})`; }
+function candArgs(cand, qty, me) {
+  if (!cand.inputs.length) return [];
+  if (cand.inputs.length === 1) return [cand.inputs[0] === "address" ? me : qty];
+  return cand.inputs.map((t) => (t === "address" ? me : qty));
+}
+
+async function openMint(ev) {
+  mintSession.ev = ev; mintSession.qty = 1; mintSession.cand = null;
+  if (!state.signer) {
+    closeModals();
+    if (!candidateProviders().length) {
+      $("mintTitle").textContent = `Mint ${ev.name}`;
+      $("mintBody").innerHTML = `<p class="sub">No wallet detected in this browser. Open MintRadar inside your wallet app's browser (Trust Wallet, MetaMask, Binance Wallet…) and tap Mint again — or copy the contract and give it to your agent to mint for you.</p>`;
+      $("mintModal").classList.remove("hidden");
+      return;
+    }
+    await connectWallet(() => openMint(ev));
+    return;
+  }
+  $("mintTitle").textContent = `Mint ${ev.name}`;
+  $("mintBody").innerHTML = `<p class="sub">Checking the contract and preparing your mint…</p>`;
+  $("mintModal").classList.remove("hidden");
+  await prepareMint();
+}
+
+async function prepareMint() {
+  const ev = mintSession.ev;
+  const body = $("mintBody");
+  body.innerHTML = `<p class="sub">Reading the contract's verified mint function…</p>`;
+  const abi = await fetchAbi(ev.contract);
+  const cands = mintCandidates(abi);
+  for (const cand of cands) {
+    try {
+      const c = new ethers.Contract(ev.contract, [cand.frag], state.signer);
+      await c.getFunction(candSig(cand)).staticCall(...candArgs(cand, mintSession.qty, state.wallet), { value: 0n });
+      mintSession.cand = cand;
+      break;
+    } catch { /* try the next candidate shape */ }
+  }
+  if (!mintSession.cand) {
+    body.innerHTML = `
+      <p class="sub">This mint can't be completed here right now — it may have just closed, or it needs something extra (an allowlist spot, a proof, or a different step).</p>
+      <div class="event-actions">
+        <a class="btn btn-grad btn-sm" href="https://bscscan.com/address/${ev.contract}#writeContract" target="_blank" rel="noopener">Open it on BscScan ↗</a>
+        <button class="btn btn-ghost btn-sm" data-copy2="${ev.contract}">Copy contract</button>
+      </div>
+      <p class="foot-note">Agent ID holder? Copy the contract and give it to your agent — it can check the mint properly and sign it for you.</p>`;
+    const cb = body.querySelector("[data-copy2]");
+    if (cb) cb.addEventListener("click", async () => { try { await navigator.clipboard.writeText(ev.contract); cb.textContent = "Copied ✓"; } catch { /* clipboard unavailable */ } });
+    return;
+  }
+  renderMintReady();
+}
+
+function renderMintReady() {
+  const ev = mintSession.ev;
+  const cand = mintSession.cand;
+  const hasQty = cand.inputs.some((t) => /^uint/.test(t));
+  $("mintBody").innerHTML = `
+    <div class="mint-kv"><span>Token</span><b>${ev.name} ($${ev.symbol})</b></div>
+    <div class="mint-kv"><span>Cost</span><b>Free — gas only</b></div>
+    <div class="mint-kv"><span>Minting into</span><b>${state.providerName || "Your wallet"} · ${short(state.wallet)}</b></div>
+    ${hasQty ? `<div class="mint-qty"><span style="color:var(--muted);font-weight:600">Quantity</span><button class="qty-btn" id="qtyMinus">−</button><span class="qty-num" id="qtyNum">${mintSession.qty}</span><button class="qty-btn" id="qtyPlus">+</button></div>` : ""}
+    <button class="btn btn-grad btn-lg" id="mintGo" style="width:100%">Mint now</button>
+    <p class="mint-status" id="mintStatus"></p>
+    <p class="foot-note">Your wallet will ask you to confirm. MintRadar never touches your keys or your funds.</p>`;
+  if (hasQty) {
+    $("qtyMinus").addEventListener("click", () => { if (mintSession.qty > 1) { mintSession.qty--; $("qtyNum").textContent = mintSession.qty; } });
+    $("qtyPlus").addEventListener("click", () => { if (mintSession.qty < 20) { mintSession.qty++; $("qtyNum").textContent = mintSession.qty; } });
+  }
+  $("mintGo").addEventListener("click", doMint);
+}
+
+async function doMint() {
+  const ev = mintSession.ev;
+  const cand = mintSession.cand;
+  const status = $("mintStatus");
+  const go = $("mintGo");
+  go.disabled = true;
+  status.className = "mint-status";
+  status.textContent = "Confirm the mint in your wallet…";
+  try {
+    const c = new ethers.Contract(ev.contract, [cand.frag], state.signer);
+    const tx = await c.getFunction(candSig(cand))(...candArgs(cand, mintSession.qty, state.wallet), { value: 0n });
+    status.textContent = "Sent — waiting for the chain to confirm…";
+    const rc = await tx.wait();
+    status.className = "mint-status ok";
+    status.innerHTML = `Minted — ${ev.name} is now in your wallet. <a href="https://bscscan.com/tx/${rc.hash}" target="_blank" rel="noopener">View the transaction ↗</a>`;
+    go.textContent = "Minted ✓";
+  } catch {
+    go.disabled = false;
+    status.className = "mint-status err";
+    status.textContent = "The mint didn't go through — it may have just closed, or the wallet rejected it. If a transaction was sent, only gas was spent.";
+  }
+}
 
 // ---------- routing ----------
 function route() {
