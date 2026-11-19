@@ -88,8 +88,18 @@ function renderRadar() {
       <div class="event-meta">${fmtDate(ev.at)} · ${ev.minters.toLocaleString()} minters · <a href="https://bscscan.com/address/${ev.contract}" target="_blank" rel="noopener">${short(ev.contract)}</a></div>
       <p class="event-note">${ev.note}</p>
       ${agentLinks ? `<div class="event-agents">Tracked agents in: ${agentLinks}${ev.agentsNote ? " · " + ev.agentsNote : ""}</div>` : (ev.agentsNote ? `<div class="event-agents">${ev.agentsNote}</div>` : "")}
+      <div class="event-actions">
+        <a class="btn btn-grad btn-sm" href="https://bscscan.com/address/${ev.contract}#writeContract" target="_blank" rel="noopener">Mint it yourself ↗</a>
+        <button class="btn btn-ghost btn-sm" data-copy="${ev.contract}">Copy contract</button>
+      </div>
     `;
     feed.appendChild(div);
+    const copyBtn = div.querySelector("[data-copy]");
+    if (copyBtn) copyBtn.addEventListener("click", async () => {
+      try { await navigator.clipboard.writeText(copyBtn.dataset.copy); copyBtn.textContent = "Copied ✓"; }
+      catch (e) { copyBtn.textContent = "Copy failed — use the address link above"; }
+      setTimeout(() => { copyBtn.textContent = "Copy contract"; }, 2000);
+    });
   }
   $("radarUpdated").textContent = "Source: " + state.radar.source + " · Last updated " + fmtDate(state.radar.updatedAt);
   $("statEvents").textContent = state.radar.events.length;
