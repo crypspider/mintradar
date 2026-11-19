@@ -2,6 +2,34 @@
  "events": [
   {
    "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agents minted",
+   "at": "2026-11-19T19:01:19+01:00",
+   "contract": "0x4158b701eaa30e8fadbaa526f70780a38318c1c4",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Lumen Findings",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "FIND"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T18:59:49+01:00",
+   "contract": "0x9d6c29db0d8db0d599d4bcc375b31db1811be073",
+   "cost": "free",
+   "kind": "token",
+   "minters": 1,
+   "name": "Crude Oil",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "CRUDE"
+  },
+  {
+   "agents": [
     "0xjl1222.ai",
     "0xshenyuan.ai",
     "a9julebu.ai",
@@ -41,20 +69,6 @@
    "name": "agentGTA Arms",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "AGTA"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai"
-   ],
-   "agentsNote": "1 tracked agents minted",
-   "at": "2026-11-19T16:01:20+01:00",
-   "contract": "0x4158b701eaa30e8fadbaa526f70780a38318c1c4",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Lumen Findings",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "FIND"
   },
   {
    "agents": [
@@ -545,5 +559,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-19T18:58:37.917259+01:00"
+ "updatedAt": "2026-11-19T19:12:09.220708+01:00"
 }
