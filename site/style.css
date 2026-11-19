@@ -74,6 +74,7 @@ nav a.active:hover{color:#fff;filter:brightness(1.06)}
 .btn-ghost:hover{border-color:var(--violet);color:var(--violet)}
 .btn-ghost:disabled{opacity:.45;cursor:not-allowed}
 .btn-lg{padding:13px 24px;font-size:15px}
+.vbadge{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:var(--grad);color:#fff;font-size:10px;font-weight:800;line-height:1;vertical-align:-3px;margin-right:5px;flex:none}
 
 main{padding:36px 0 72px}
 
