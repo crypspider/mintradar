@@ -2,6 +2,30 @@
 import { ethers } from "https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.min.js";
 
 const CFG = window.MINTRADAR_CONFIG;
+// The official on-chain Agent ID registry (SPACE ID, issued for Binance
+// Wallet). handleOf(address) returns the wallet's Agent ID handle without
+// the ".ai" suffix, or "" when the wallet holds no real Agent ID. This is
+// the only honest source for the Verified badge: a name registered on
+// MintRadar alone is NOT a Binance Agent ID (cherie.ai is the example).
+const AGENT_REGISTRY = "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F";
+const AGENT_REGISTRY_ABI = [
+  "function handleOf(address) view returns (string)",
+  "function ownerOfHandle(string) view returns (address)",
+];
+const verifiedCache = new Map();
+async function binanceVerified(name, address) {
+  const key = (name || "").toLowerCase() + "|" + (address || "").toLowerCase();
+  if (verifiedCache.has(key)) return verifiedCache.get(key);
+  let ok = false;
+  try {
+    const reg = new ethers.Contract(AGENT_REGISTRY, AGENT_REGISTRY_ABI, readProvider());
+    const handle = (name || "").toLowerCase().replace(/\.ai$/, "");
+    const owner = await reg.ownerOfHandle(handle);
+    ok = !!owner && owner !== ethers.ZeroAddress && owner.toLowerCase() === (address || "").toLowerCase();
+  } catch { ok = false; }
+  verifiedCache.set(key, ok);
+  return ok;
+}
 const REGISTRY_ABI = [
   "function agentIdOf(address) view returns (string)",
   "function addressOfName(bytes32) view returns (address)",
@@ -267,7 +291,7 @@ async function renderAgentProfile(agentId) {
         <span class="followers" data-fcount="${address}">… followers</span>
         <button class="btn btn-gold" data-follow="${address}">Follow</button>
       </div>
-      <p class="foot-note"><span class="vbadge">✓</span>Verified means this Agent ID resolves through Binance's resolution service to the address that registered it on MintRadar.</p>
+      <p class="foot-note"><span class="vbadge">✓</span>Verified means this is a real Binance Agent ID: the official Agent ID registry on BNB Chain (SPACE ID) shows the name belonging to the same wallet that registered it here. A name registered only on MintRadar shows “Registered” instead — registering here alone does not make a Binance Agent ID.</p>
     </div>
     <div class="card"><h3>Recent radar detections</h3><div id="profEvents"></div></div>`;
   const evBox = $("profEvents");
@@ -275,9 +299,14 @@ async function renderAgentProfile(agentId) {
   evBox.innerHTML = evs.length
     ? evs.map((ev) => `<p>📡 <b>${ev.name}</b> — ${fmtDate(ev.at)} · ${ev.note}</p>`).join("")
     : `<p class="sub">No detections in the current feed window.</p>`;
-  // Verified badge: the name's registered address must be this address.
+  // Verified badge: the name must be a real Binance Agent ID for this
+  // wallet in the official on-chain registry — not just registered here.
   if (c && regAddr && regAddr.toLowerCase() === address.toLowerCase()) {
-    $("profBadge").innerHTML = '<span class="vbadge">✓</span>Verified Agent';
+    if (await binanceVerified(name, address)) {
+      $("profBadge").innerHTML = '<span class="vbadge">✓</span>Verified Agent';
+    } else {
+      $("profBadge").innerHTML = '<span class="reg-tag">Registered on MintRadar</span>';
+    }
   }
   hydrateFollowUI();
 }
@@ -369,7 +398,9 @@ async function refreshConnectLabel() {
     if (!c) return;
     const name = await c.agentIdOf(state.wallet);
     if (name) {
-      $("connectBtn").innerHTML = '<span class="vbadge">✓</span>' + name;
+      // The check disc is earned only by a real Binance Agent ID; a name
+      // registered here alone shows without it.
+      $("connectBtn").innerHTML = (await binanceVerified(name, state.wallet)) ? '<span class="vbadge">✓</span>' + name : name;
       if (navReg) navReg.textContent = "My Agent";
       if (heroCta) { heroCta.textContent = "View my agent profile"; heroCta.setAttribute("href", "#/agent/" + name); }
       if (formCard) formCard.classList.add("hidden");
@@ -583,28 +614,70 @@ async function openMint(ev) {
   await prepareMint();
 }
 
+async function explainMintBlock(ev, abi, lastErr) {
+  const generic = "This mint can't be completed here right now — it may have just closed, or it needs something extra (an allowlist spot, a proof, or a different step). Nothing was sent, and no gas was spent.";
+  try {
+    if (abi) {
+      // Agent-ID gate? The contract itself points at the registry it checks.
+      const hasReg = abi.some((f) => f.type === "function" && f.name === "agentIdRegistry");
+      if (hasReg) {
+        const c = new ethers.Contract(ev.contract, ["function agentIdRegistry() view returns (address)"], readProvider());
+        const regAddr = await c.agentIdRegistry();
+        const reg = new ethers.Contract(regAddr, AGENT_REGISTRY_ABI, readProvider());
+        const handle = await reg.handleOf(state.wallet);
+        if (!handle) {
+          return `This mint is <b>only for verified Binance Agent ID wallets</b>. The contract checked the official Agent ID registry, and your connected wallet (${state.providerName || "your wallet"} · ${short(state.wallet)}) doesn't hold a Binance Agent ID, so it refused the mint. Nothing was sent, and no gas was spent.<br><br>Hold an Agent ID? Copy the contract below and give it to your agent to mint for you — or connect the wallet that holds your Agent ID and try again.`;
+        }
+      }
+      // Sold out?
+      const names = new Set(abi.filter((f) => f.type === "function").map((f) => f.name));
+      const mintedFn = ["totalMinted", "totalSupply"].find((n) => names.has(n));
+      const maxFn = ["MAX_SUPPLY", "maxSupply"].find((n) => names.has(n));
+      if (mintedFn && maxFn) {
+        const c = new ethers.Contract(ev.contract, abi, readProvider());
+        const [m, mx] = await Promise.all([c[mintedFn](), c[maxFn]()]);
+        if (BigInt(m) >= BigInt(mx)) return `This mint is <b>sold out</b> — all ${Number(mx).toLocaleString()} pieces have already been minted. Nothing was sent, and no gas was spent.`;
+      }
+      // The contract's own named reason?
+      const data = lastErr && (lastErr.data || (lastErr.info && lastErr.info.error && lastErr.info.error.data));
+      if (data && data !== "0x") {
+        let ename = "";
+        try { const p = new ethers.Interface(abi).parseError(data); if (p) ename = p.name; } catch { /* unknown custom error */ }
+        if (/already/i.test(ename)) return `Your connected wallet has <b>already minted</b> this one — it's limited to one per wallet. Nothing was sent, and no gas was spent.`;
+        if (/allowlist|whitelist|merkle|proof|eligible/i.test(ename)) return `This mint is <b>allowlist-gated</b> — your connected wallet isn't on its list, so the contract refused it. Nothing was sent, and no gas was spent.`;
+        if (/closed|paused|notstarted|notopen|ended|inactive|notlive/i.test(ename)) return `This mint is <b>not open right now</b> — it hasn't started yet, or it has already closed. Nothing was sent, and no gas was spent.`;
+        if (/supply|max|exceed|sold/i.test(ename)) return `This mint has <b>hit its supply limit</b>. Nothing was sent, and no gas was spent.`;
+        if (ename) return `${generic}<br><br><span style="font-size:13px">The contract's own reason: <code>${ename}</code></span>`;
+      }
+    }
+  } catch { /* fall through to the generic message */ }
+  return generic;
+}
+
 async function prepareMint() {
   const ev = mintSession.ev;
   const body = $("mintBody");
   body.innerHTML = `<p class="sub">Reading the contract's verified mint function…</p>`;
   const abi = await fetchAbi(ev.contract);
   const cands = mintCandidates(abi);
+  let lastErr = null;
   for (const cand of cands) {
     try {
       const c = new ethers.Contract(ev.contract, [cand.frag], state.signer);
       await c.getFunction(candSig(cand)).staticCall(...candArgs(cand, mintSession.qty, state.wallet), { value: 0n });
       mintSession.cand = cand;
       break;
-    } catch { /* try the next candidate shape */ }
+    } catch (e) { lastErr = e; /* try the next candidate shape */ }
   }
   if (!mintSession.cand) {
+    const why = await explainMintBlock(ev, abi, lastErr);
     body.innerHTML = `
-      <p class="sub">This mint can't be completed here right now — it may have just closed, or it needs something extra (an allowlist spot, a proof, or a different step).</p>
+      <p class="sub">${why}</p>
       <div class="event-actions">
         <a class="btn btn-grad btn-sm" href="https://bscscan.com/address/${ev.contract}#writeContract" target="_blank" rel="noopener">Open it on BscScan ↗</a>
         <button class="btn btn-ghost btn-sm" data-copy2="${ev.contract}">Copy contract</button>
       </div>
-      <p class="foot-note">Agent ID holder? Copy the contract and give it to your agent — it can check the mint properly and sign it for you.</p>`;
+      <p class="foot-note">MintRadar test-calls every mint from your own address first, so a refused mint never costs you gas.</p>`;
     const cb = body.querySelector("[data-copy2]");
     if (cb) cb.addEventListener("click", async () => { try { await navigator.clipboard.writeText(ev.contract); cb.textContent = "Copied ✓"; } catch { /* clipboard unavailable */ } });
     return;
