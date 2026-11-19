@@ -164,34 +164,48 @@ document.addEventListener("click", async (e) => {
 // ---------- agent profile ----------
 async function renderAgentProfile(agentId) {
   const box = $("agentProfile");
-  const a = state.agents.find((x) => x.agentId.toLowerCase() === agentId.toLowerCase());
-  if (!a) { box.innerHTML = `<div class="card">Agent <b>${agentId}</b> is not in the tracked directory.</div>`; return; }
+  const c = getReadContract();
+  let a = state.agents.find((x) => x.agentId.toLowerCase() === agentId.toLowerCase())
+       || state.agents.find((x) => x.address.toLowerCase() === agentId.toLowerCase());
+  let regName = null, regAddr = null;
+  if (c) {
+    try {
+      if (/^0x[0-9a-fA-F]{40}$/.test(agentId)) {
+        const n = await c.agentIdOf(agentId);
+        if (n) { regName = n; regAddr = agentId; }
+      } else {
+        const addr = await c.addressOfName(ethers.keccak256(ethers.toUtf8Bytes(agentId.toLowerCase())));
+        if (addr !== ethers.ZeroAddress) { regName = agentId.toLowerCase(); regAddr = addr; }
+      }
+    } catch { /* reads are best-effort */ }
+  }
+  if (!a && !regName) {
+    box.innerHTML = `<div class="card">Agent <b class="aaddr">${agentId}</b> is not in the tracked directory and has not registered on MintRadar yet.</div>`;
+    return;
+  }
+  const name = a ? a.agentId : regName;
+  const address = a ? a.address : regAddr;
+  const eyebrow = a ? `TRACKED AGENT · RANK #${a.rank}` : "REGISTERED AGENT";
   box.innerHTML = `
     <div class="card">
-      <div class="arank">TRACKED AGENT · RANK #${a.rank}</div>
-      <h2 style="margin:6px 0">${a.agentId} <span class="badge-verified" id="profBadge"></span></h2>
-      <p class="aaddr">${a.address} · <a href="https://bscscan.com/address/${a.address}" target="_blank" rel="noopener">BscScan</a></p>
+      <div class="arank">${eyebrow}</div>
+      <h2 style="margin:6px 0">${name} <span class="badge-verified" id="profBadge"></span></h2>
+      <p class="aaddr">${address} · <a href="https://bscscan.com/address/${address}" target="_blank" rel="noopener">BscScan</a></p>
       <div class="row" style="display:flex;gap:18px;align-items:center">
-        <span class="followers" data-fcount="${a.address}">… followers</span>
-        <button class="btn btn-gold" data-follow="${a.address}">Follow</button>
+        <span class="followers" data-fcount="${address}">… followers</span>
+        <button class="btn btn-gold" data-follow="${address}">Follow</button>
       </div>
       <p class="foot-note"><span class="vbadge">✓</span>Verified means this Agent ID resolves through Binance's resolution service to the address that registered it on MintRadar.</p>
     </div>
     <div class="card"><h3>Recent radar detections</h3><div id="profEvents"></div></div>`;
   const evBox = $("profEvents");
-  const evs = state.radar.events.filter((ev) => (ev.agents || []).some((x) => x.toLowerCase() === a.agentId.toLowerCase()));
+  const evs = state.radar.events.filter((ev) => (ev.agents || []).some((x) => x.toLowerCase() === name.toLowerCase()));
   evBox.innerHTML = evs.length
     ? evs.map((ev) => `<p>📡 <b>${ev.name}</b> — ${fmtDate(ev.at)} · ${ev.note}</p>`).join("")
     : `<p class="sub">No detections in the current feed window.</p>`;
-  // Verified badge: name resolution must match the registered address.
-  const c = getReadContract();
-  if (c) {
-    try {
-      const regAddr = await c.addressOfName(ethers.keccak256(ethers.toUtf8Bytes(a.agentId.toLowerCase())));
-      if (regAddr !== ethers.ZeroAddress && regAddr.toLowerCase() === a.address.toLowerCase()) {
-        $("profBadge").innerHTML = '<span class="vbadge">✓</span>Verified Agent';
-      }
-    } catch { /* read failed; leave unbadged */ }
+  // Verified badge: the name's registered address must be this address.
+  if (c && regAddr && regAddr.toLowerCase() === address.toLowerCase()) {
+    $("profBadge").innerHTML = '<span class="vbadge">✓</span>Verified Agent';
   }
   hydrateFollowUI();
 }
@@ -281,7 +295,7 @@ async function refreshConnectLabel() {
     if (name) {
       $("connectBtn").innerHTML = '<span class="vbadge">✓</span>' + name;
       if (navReg) navReg.textContent = "My Agent";
-      if (heroCta) { heroCta.textContent = "View my agent profile"; heroCta.setAttribute("href", "#/agent/" + state.wallet); }
+      if (heroCta) { heroCta.textContent = "View my agent profile"; heroCta.setAttribute("href", "#/agent/" + name); }
       if (formCard) formCard.classList.add("hidden");
     } else {
       if (navReg) navReg.textContent = "Register";
