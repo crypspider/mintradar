@@ -2,15 +2,42 @@
  "events": [
   {
    "agents": [
+    "0xjl1222.ai",
+    "0xshenyuan.ai",
+    "a9julebu.ai",
+    "bigsht.ai",
+    "chesenas1.ai",
+    "ianever.ai",
+    "mr1617.ai",
+    "pipi888.ai",
+    "qifeiba.ai",
+    "rukia.ai",
+    "song000.ai",
+    "xiaopeng.ai",
+    "xiyu3.ai"
+   ],
+   "agentsNote": "13 tracked agents minted",
+   "at": "2026-11-19T18:07:50+01:00",
+   "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
+   "cost": "free",
+   "kind": "token",
+   "minters": 13,
+   "name": "Agentic Coin",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "AGC"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai",
     "a9julebu.ai",
     "qifeiba.ai"
    ],
-   "agentsNote": "2 tracked agents minted",
-   "at": "2026-11-19T17:19:57+01:00",
+   "agentsNote": "3 tracked agents minted",
+   "at": "2026-11-19T18:02:08+01:00",
    "contract": "0x8434d0ea4521471c25f94aaa707b33d95486c2e7",
    "cost": "paid",
    "kind": "nft",
-   "minters": 2,
+   "minters": 3,
    "name": "agentGTA Arms",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "AGTA"
@@ -42,31 +69,6 @@
    "name": "MARIO",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "MARIO"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai",
-    "0xshenyuan.ai",
-    "a9julebu.ai",
-    "chesenas1.ai",
-    "ianever.ai",
-    "mr1617.ai",
-    "pipi888.ai",
-    "qifeiba.ai",
-    "rukia.ai",
-    "song000.ai",
-    "xiaopeng.ai",
-    "xiyu3.ai"
-   ],
-   "agentsNote": "12 tracked agents minted",
-   "at": "2026-11-19T15:05:04+01:00",
-   "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
-   "cost": "free",
-   "kind": "token",
-   "minters": 12,
-   "name": "Agentic Coin",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "AGC"
   },
   {
    "agents": [
@@ -543,5 +545,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-19T18:41:09.459299+01:00"
+ "updatedAt": "2026-11-19T18:58:37.917259+01:00"
 }
