@@ -5,6 +5,20 @@
     "0xjl1222.ai"
    ],
    "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T11:00:17+01:00",
+   "contract": "0xa65944f2093e6dcfd1d1a7a4f6744f924068f878",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "AgentForge Hero",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "AFHERO"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
    "at": "2026-11-19T10:46:46+01:00",
    "contract": "0x94dea5b614b8cb539efc63ba7c652286169a31d9",
    "cost": "free",
@@ -413,5 +427,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-19T10:57:10.310443+01:00"
+ "updatedAt": "2026-11-19T11:12:06.266514+01:00"
 }
