@@ -49,6 +49,17 @@ nav a{color:var(--text2);font-weight:600;font-size:14.5px;padding:8px 14px;borde
 nav a:hover{color:var(--ink);background:var(--surface2);text-decoration:none}
 nav a.active{color:#fff;background:var(--grad);box-shadow:0 4px 14px rgba(109,74,252,.35)}
 nav a.active:hover{color:#fff;filter:brightness(1.06)}
+.header-actions{display:flex;gap:8px;align-items:center}
+@media (max-width:760px){
+  .header-in{gap:8px 10px;padding:9px 14px}
+  .logo{font-size:19px;gap:8px}
+  .logo-img{width:32px;height:32px}
+  nav{order:3;flex:1 1 100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav a{padding:6px 11px;font-size:13.5px;white-space:nowrap}
+  .header-actions{margin-left:auto}
+  .header-actions .btn{padding:8px 13px;font-size:13px}
+}
 
 /* ---------- buttons ---------- */
 .btn{border:0;border-radius:999px;padding:10px 20px;font-weight:700;cursor:pointer;font-size:14px;font-family:var(--font-body);transition:.15s;display:inline-block;letter-spacing:.01em}
