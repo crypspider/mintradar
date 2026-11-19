@@ -8,7 +8,7 @@
     "pipi888.ai"
    ],
    "agentsNote": "4 tracked agents minted",
-   "at": "2026-11-19T06:20:09+01:00",
+   "at": "2026-11-19T06:30:11+01:00",
    "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
    "cost": "free",
    "kind": "token",
@@ -144,5 +144,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-19T06:27:10.493365+01:00"
+ "updatedAt": "2026-11-19T06:42:07.880377+01:00"
 }
