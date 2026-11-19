@@ -97,6 +97,14 @@
     </div>
 
     <h2 class="section-title"><span class="sec-bar"></span>Latest detections</h2>
+    <input id="radarSearch" class="search" type="text" placeholder="Search detections… e.g. Cheese, PXIO, Dinobyte">
+    <div class="filter-row">
+      <button class="fchip active" data-rfilter="all">All</button>
+      <button class="fchip" data-rfilter="nft">NFTs</button>
+      <button class="fchip" data-rfilter="token">Tokens</button>
+      <button class="fchip" data-rfilter="free">Free</button>
+      <button class="fchip" data-rfilter="paid">Paid</button>
+    </div>
     <div id="radarFeed" class="feed"></div>
     <p class="foot-note" id="radarUpdated"></p>
   </section>
