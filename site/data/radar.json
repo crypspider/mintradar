@@ -2,15 +2,16 @@
  "events": [
   {
    "agents": [
+    "0xjl1222.ai",
     "ianever.ai",
     "pipi888.ai"
    ],
-   "agentsNote": "2 tracked agents minted",
-   "at": "2026-11-19T05:26:12+01:00",
+   "agentsNote": "3 tracked agents minted",
+   "at": "2026-11-19T05:45:07+01:00",
    "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
    "cost": "free",
    "kind": "token",
-   "minters": 2,
+   "minters": 3,
    "name": "Agentic Coin",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "AGC"
@@ -128,5 +129,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-19T05:42:08.451862+01:00"
+ "updatedAt": "2026-11-19T05:57:07.732454+01:00"
 }
