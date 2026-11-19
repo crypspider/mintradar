@@ -2,20 +2,77 @@
  "events": [
   {
    "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T07:07:56+01:00",
+   "contract": "0x38c1695eb72b7522c8d6452a4ce27122532a0d69",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "AgentNova Remnants",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "REMNANT"
+  },
+  {
+   "agents": [
+    "0xshenyuan.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T07:03:32+01:00",
+   "contract": "0x99379aa511853e540473147322fefdaba7dae35e",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Mandalux",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "MANDALUX"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agents minted",
+   "at": "2026-11-19T07:01:06+01:00",
+   "contract": "0x4158b701eaa30e8fadbaa526f70780a38318c1c4",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Lumen Findings",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "FIND"
+  },
+  {
+   "agents": [
     "0xjl1222.ai",
     "0xshenyuan.ai",
     "ianever.ai",
-    "pipi888.ai"
+    "pipi888.ai",
+    "song000.ai"
    ],
-   "agentsNote": "4 tracked agents minted",
-   "at": "2026-11-19T06:30:11+01:00",
+   "agentsNote": "5 tracked agents minted",
+   "at": "2026-11-19T06:59:07+01:00",
    "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
    "cost": "free",
    "kind": "token",
-   "minters": 4,
+   "minters": 5,
    "name": "Agentic Coin",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "AGC"
+  },
+  {
+   "agents": [
+    "nofomok.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-19T06:58:12+01:00",
+   "contract": "0x08e3e40829718913fb627c818cb334b1e3d5b699",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Rulz Share",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "RSHARE"
   },
   {
    "agents": [
@@ -30,20 +87,6 @@
    "name": "DinoAgent",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "DINO"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-19T04:01:08+01:00",
-   "contract": "0x4158b701eaa30e8fadbaa526f70780a38318c1c4",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Lumen Findings",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "FIND"
   },
   {
    "agents": [
@@ -144,5 +187,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-19T06:42:07.880377+01:00"
+ "updatedAt": "2026-11-19T07:22:57.058947+01:00"
 }
