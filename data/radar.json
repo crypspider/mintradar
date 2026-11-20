@@ -2,6 +2,106 @@
  "events": [
   {
    "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-20T19:10:37+01:00",
+   "contract": "0x9347bc23e404386957029ad89aefc72b8b7365bc",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "sidecoo Check-in",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "SCCHECKIN"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-20T19:10:31+01:00",
+   "contract": "0x4de656203a7c533148fabf15ce77a558b8f3cb79",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Wok Agent Badge",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "WOKAB"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-20T18:56:51+01:00",
+   "contract": "0x5690b34da3efc5d55511c37a0ad4988cace8d912",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Agent Legends",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "AGL"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-20T18:56:43+01:00",
+   "contract": "0x4905ce1ce138001a0abb5f04aa0af9c9dd700485",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "AGENTRA GENESIS",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "AGTRG"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-20T18:56:34+01:00",
+   "contract": "0xb8506b4ed75bb6f2369a98bb0f467768d68b2de0",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "AgentDrop Claim NFT",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "ADRP"
+  },
+  {
+   "agents": [
+    "0xshenyuan.ai",
+    "0xzed.ai"
+   ],
+   "agentsNote": "2 tracked agents minted",
+   "at": "2026-11-20T18:56:12+01:00",
+   "contract": "0x2d9943d20930ec59d7b432a0cf30521f8c0cc016",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 2,
+   "name": "SunHarvest",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "SHARV"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai",
+    "0xzed.ai"
+   ],
+   "agentsNote": "2 tracked agents minted",
+   "at": "2026-11-20T18:56:05+01:00",
+   "contract": "0xe71dc7bb9cb95fa6ee92c09a9d79a7c26b78eeaf",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 2,
+   "name": "Contextgraph Nodes",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "NODE"
+  },
+  {
+   "agents": [
     "0xjl1222.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -113,20 +213,6 @@
   },
   {
    "agents": [
-    "0xjl1222.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-20T10:00:57+01:00",
-   "contract": "0xe71dc7bb9cb95fa6ee92c09a9d79a7c26b78eeaf",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Contextgraph Nodes",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "NODE"
-  },
-  {
-   "agents": [
     "0xshenyuan.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -138,20 +224,6 @@
    "name": "Snowmelt Primrose",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "SNPE"
-  },
-  {
-   "agents": [
-    "0xshenyuan.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-20T05:04:37+01:00",
-   "contract": "0x2d9943d20930ec59d7b432a0cf30521f8c0cc016",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "SunHarvest",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "SHARV"
   },
   {
    "agents": [
@@ -770,5 +842,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-20T17:42:08.626131+01:00"
+ "updatedAt": "2026-11-20T19:12:19.638423+01:00"
 }
