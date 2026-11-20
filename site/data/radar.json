@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "0xshenyuan.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-20T02:03:44+01:00",
+   "contract": "0x0bf44fa54a82ae425c58c114b9be5bd271bd82b0",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Ghost Agents",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "GHOST"
+  },
+  {
+   "agents": [
     "0xjl1222.ai",
     "0xshenyuan.ai",
     "a9julebu.ai",
@@ -629,5 +643,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-20T01:12:16.893261+01:00"
+ "updatedAt": "2026-11-20T02:12:05.380127+01:00"
 }
