@@ -5,6 +5,20 @@
     "0xjl1222.ai"
    ],
    "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-20T14:00:02+01:00",
+   "contract": "0x868f7135187ddfe1fe94e6a9711b3b17ae0fdd90",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "GTA6 PUNK",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "GTAPUNK"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
    "at": "2026-11-20T13:06:04+01:00",
    "contract": "0xe071f5aa90f211a0824e717f1569060193679ce6",
    "cost": "free",
@@ -699,5 +713,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-20T13:18:53.801564+01:00"
+ "updatedAt": "2026-11-20T14:12:05.404446+01:00"
 }
