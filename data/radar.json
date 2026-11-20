@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agents minted",
+   "at": "2026-11-20T04:01:19+01:00",
+   "contract": "0x4158b701eaa30e8fadbaa526f70780a38318c1c4",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Lumen Findings",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "FIND"
+  },
+  {
+   "agents": [
     "0xshenyuan.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -53,20 +67,6 @@
    "name": "Urbanova Plots",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "PLOT"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai"
-   ],
-   "agentsNote": "1 tracked agents minted",
-   "at": "2026-11-20T01:01:17+01:00",
-   "contract": "0x4158b701eaa30e8fadbaa526f70780a38318c1c4",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Lumen Findings",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "FIND"
   },
   {
    "agents": [
@@ -643,5 +643,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-20T02:12:05.380127+01:00"
+ "updatedAt": "2026-11-20T04:12:08.268665+01:00"
 }
