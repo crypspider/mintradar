@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "0xshenyuan.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-20T05:04:37+01:00",
+   "contract": "0x2d9943d20930ec59d7b432a0cf30521f8c0cc016",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "SunHarvest",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "SHARV"
+  },
+  {
+   "agents": [
     "0xjl1222.ai",
     "0xshenyuan.ai",
     "a9julebu.ai",
@@ -643,5 +657,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-20T04:57:08.910721+01:00"
+ "updatedAt": "2026-11-20T05:12:14.169898+01:00"
 }
