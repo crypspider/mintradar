@@ -2,14 +2,15 @@
  "events": [
   {
    "agents": [
+    "bigsht.ai",
     "xzz.ai"
    ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-20T15:31:20+01:00",
+   "agentsNote": "2 tracked agents minted",
+   "at": "2026-11-20T16:17:09+01:00",
    "contract": "0x2a60aab19b182b5c4b47fffc066ada06ab27924f",
    "cost": "paid",
    "kind": "token",
-   "minters": 1,
+   "minters": 2,
    "name": "Agent ID",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "AI"
@@ -755,5 +756,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-20T15:42:10.913866+01:00"
+ "updatedAt": "2026-11-20T16:27:09.025511+01:00"
 }
