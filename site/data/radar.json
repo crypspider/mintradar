@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-20T17:33:37+01:00",
+   "contract": "0xace2346c9026224c131b22921a54c6f01c82c5f5",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "League Of Agent Login Pass",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "LOAID"
+  },
+  {
+   "agents": [
     "bigsht.ai",
     "xzz.ai"
    ],
@@ -756,5 +770,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-20T16:27:09.025511+01:00"
+ "updatedAt": "2026-11-20T17:42:08.626131+01:00"
 }
