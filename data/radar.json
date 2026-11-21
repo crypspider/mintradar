@@ -4,6 +4,74 @@
    "agents": [
     "0xjl1222.ai"
    ],
+   "agentsNote": "1 tracked agents minted",
+   "at": "2026-11-21T01:04:06+01:00",
+   "contract": "0x02a9830b695229d0bcaa39d236778c257b87d85b",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Urbanova Plots",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "PLOT"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai",
+    "0xshenyuan.ai",
+    "a9julebu.ai",
+    "bigsht.ai",
+    "chesenas1.ai",
+    "ianever.ai",
+    "mr1617.ai",
+    "pipi888.ai",
+    "qifeiba.ai",
+    "rukia.ai",
+    "song000.ai",
+    "xiaopeng.ai",
+    "xiyu3.ai"
+   ],
+   "agentsNote": "13 tracked agents minted",
+   "at": "2026-11-21T01:02:05+01:00",
+   "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
+   "cost": "free",
+   "kind": "token",
+   "minters": 13,
+   "name": "Agentic Coin",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "AGC"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agents minted",
+   "at": "2026-11-21T01:00:13+01:00",
+   "contract": "0xad0d78689d047bb9a32f5bf93438373a73da68ec",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Vitaliq Scans",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "SCAN"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agents minted",
+   "at": "2026-11-21T01:00:02+01:00",
+   "contract": "0xf09b7044feedc8154ccebc1f12eb218ffb1508f9",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Kitsune",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "KITSUNE"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai"
+   ],
    "agentsNote": "1 tracked agent minted",
    "at": "2026-11-20T19:14:32+01:00",
    "contract": "0xb4139ecb4f897e891f768d2ab3b5c3a380ecdcd3",
@@ -201,32 +269,6 @@
   },
   {
    "agents": [
-    "0xjl1222.ai",
-    "0xshenyuan.ai",
-    "a9julebu.ai",
-    "bigsht.ai",
-    "chesenas1.ai",
-    "ianever.ai",
-    "mr1617.ai",
-    "pipi888.ai",
-    "qifeiba.ai",
-    "rukia.ai",
-    "song000.ai",
-    "xiaopeng.ai",
-    "xiyu3.ai"
-   ],
-   "agentsNote": "13 tracked agents minted",
-   "at": "2026-11-20T12:59:22+01:00",
-   "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
-   "cost": "free",
-   "kind": "token",
-   "minters": 13,
-   "name": "Agentic Coin",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "AGC"
-  },
-  {
-   "agents": [
     "0xshenyuan.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -266,48 +308,6 @@
    "name": "Ghost Agents",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "GHOST"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-20T01:04:05+01:00",
-   "contract": "0x02a9830b695229d0bcaa39d236778c257b87d85b",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Urbanova Plots",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "PLOT"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-20T01:00:12+01:00",
-   "contract": "0xad0d78689d047bb9a32f5bf93438373a73da68ec",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Vitaliq Scans",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "SCAN"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-20T01:00:02+01:00",
-   "contract": "0xf09b7044feedc8154ccebc1f12eb218ffb1508f9",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Kitsune",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "KITSUNE"
   },
   {
    "agents": [
@@ -856,5 +856,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-20T19:27:08.312895+01:00"
+ "updatedAt": "2026-11-21T01:12:13.744448+01:00"
 }
