@@ -5,6 +5,48 @@
     "0xjl1222.ai"
    ],
    "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-21T01:47:06+01:00",
+   "contract": "0xdb514d1a00662fda0dc531a4cf69cd908b7e84a9",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Relay",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "RELAY"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai",
+    "0xshenyuan.ai",
+    "a9julebu.ai",
+    "alingling.ai",
+    "bigsht.ai",
+    "chesenas1.ai",
+    "ianever.ai",
+    "mapleleaf.ai",
+    "mr1617.ai",
+    "pipi888.ai",
+    "qifeiba.ai",
+    "rukia.ai",
+    "song000.ai",
+    "xiaopeng.ai",
+    "xiyu3.ai"
+   ],
+   "agentsNote": "15 tracked agents minted",
+   "at": "2026-11-21T01:43:47+01:00",
+   "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
+   "cost": "free",
+   "kind": "token",
+   "minters": 15,
+   "name": "Agentic Coin",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "AGC"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
    "at": "2026-11-21T01:13:00+01:00",
    "contract": "0x409cfe3747f1ac20f267b50bcbb6a4e9406da3a8",
    "cost": "free",
@@ -27,32 +69,6 @@
    "name": "Urbanova Plots",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "PLOT"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai",
-    "0xshenyuan.ai",
-    "a9julebu.ai",
-    "bigsht.ai",
-    "chesenas1.ai",
-    "ianever.ai",
-    "mr1617.ai",
-    "pipi888.ai",
-    "qifeiba.ai",
-    "rukia.ai",
-    "song000.ai",
-    "xiaopeng.ai",
-    "xiyu3.ai"
-   ],
-   "agentsNote": "13 tracked agents minted",
-   "at": "2026-11-21T01:02:05+01:00",
-   "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
-   "cost": "free",
-   "kind": "token",
-   "minters": 13,
-   "name": "Agentic Coin",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "AGC"
   },
   {
    "agents": [
@@ -870,5 +886,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-21T01:27:10.748997+01:00"
+ "updatedAt": "2026-11-21T01:57:14.488374+01:00"
 }
