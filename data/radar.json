@@ -3,6 +3,35 @@
   {
    "agents": [
     "0xjl1222.ai",
+    "0xzed.ai"
+   ],
+   "agentsNote": "2 tracked agents minted",
+   "at": "2026-11-21T13:34:14+01:00",
+   "contract": "0x5690b34da3efc5d55511c37a0ad4988cace8d912",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 2,
+   "name": "Agent Legends",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "AGL"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-21T13:27:48+01:00",
+   "contract": "0x461b8e3b161ab0b69aed422bc68afc7c4bfa7894",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Sepal",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "SEPL"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai",
     "0xshenyuan.ai",
     "a9julebu.ai",
     "alingling.ai",
@@ -425,20 +454,6 @@
    "name": "Wok Agent Badge",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "WOKAB"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-20T18:56:51+01:00",
-   "contract": "0x5690b34da3efc5d55511c37a0ad4988cace8d912",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Agent Legends",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "AGL"
   },
   {
    "agents": [
@@ -1144,5 +1159,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-21T13:12:05.848359+01:00"
+ "updatedAt": "2026-11-21T13:42:07.731907+01:00"
 }
