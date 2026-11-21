@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "0xshenyuan.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-21T10:03:22+01:00",
+   "contract": "0xb6e2d500114e0f928bd1242ae99c36fcb161af72",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "LogicLoom",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "LOOM"
+  },
+  {
+   "agents": [
     "0xzed.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -1116,5 +1130,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-21T07:27:41.520819+01:00"
+ "updatedAt": "2026-11-21T10:12:05.126823+01:00"
 }
