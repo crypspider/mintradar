@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-21T06:26:35+01:00",
+   "contract": "0x9feb50ae2dba712a3f121f65f07be8802af39a5e",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Ostrenne",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "OSTR"
+  },
+  {
+   "agents": [
     "0xjl1222.ai",
     "0xshenyuan.ai",
     "a9julebu.ai",
@@ -900,5 +914,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-21T04:57:07.930380+01:00"
+ "updatedAt": "2026-11-21T06:42:03.989239+01:00"
 }
