@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-21T11:58:34+01:00",
+   "contract": "0xcd231d186d21faa38be9de8e1a5a0eb48ceff4da",
+   "cost": "free",
+   "kind": "token",
+   "minters": 1,
+   "name": "No",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "NO"
+  },
+  {
+   "agents": [
     "0xshenyuan.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -1130,5 +1144,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-21T10:12:05.126823+01:00"
+ "updatedAt": "2026-11-21T12:12:03.226755+01:00"
 }
