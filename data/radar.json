@@ -5,6 +5,20 @@
     "0xjl1222.ai"
    ],
    "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-21T02:38:45+01:00",
+   "contract": "0xf0681d5d5856981b6416ae3b059fd887f8efc967",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Lordhold",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "LHOLD"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
    "at": "2026-11-21T01:47:06+01:00",
    "contract": "0xdb514d1a00662fda0dc531a4cf69cd908b7e84a9",
    "cost": "free",
@@ -886,5 +900,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-21T01:57:14.488374+01:00"
+ "updatedAt": "2026-11-21T02:46:46.953749+01:00"
 }
