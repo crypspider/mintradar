@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-21T16:28:00+01:00",
+   "contract": "0x2d15d60920f284e3e201ff59e916161799c83e2e",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "AgentPost Pioneer",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "APOST"
+  },
+  {
+   "agents": [
     "woaiai.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -1174,5 +1188,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-21T15:42:02.477391+01:00"
+ "updatedAt": "2026-11-21T16:42:03.085657+01:00"
 }
