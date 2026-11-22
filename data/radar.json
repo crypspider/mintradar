@@ -2,6 +2,62 @@
  "events": [
   {
    "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agents minted",
+   "at": "2026-11-22T01:04:05+01:00",
+   "contract": "0x02a9830b695229d0bcaa39d236778c257b87d85b",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Urbanova Plots",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "PLOT"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai",
+    "0xshenyuan.ai",
+    "a9julebu.ai",
+    "alingling.ai",
+    "bigsht.ai",
+    "chesenas1.ai",
+    "ianever.ai",
+    "mapleleaf.ai",
+    "mr1617.ai",
+    "pipi888.ai",
+    "qifeiba.ai",
+    "rukia.ai",
+    "song000.ai",
+    "xiaopeng.ai",
+    "xiyu3.ai"
+   ],
+   "agentsNote": "15 tracked agents minted",
+   "at": "2026-11-22T01:02:05+01:00",
+   "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
+   "cost": "free",
+   "kind": "token",
+   "minters": 15,
+   "name": "Agentic Coin",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "AGC"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agents minted",
+   "at": "2026-11-22T01:00:13+01:00",
+   "contract": "0xad0d78689d047bb9a32f5bf93438373a73da68ec",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Vitaliq Scans",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "SCAN"
+  },
+  {
+   "agents": [
     "xzz.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -41,34 +97,6 @@
    "name": "JAGENT",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "JAGENT"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai",
-    "0xshenyuan.ai",
-    "a9julebu.ai",
-    "alingling.ai",
-    "bigsht.ai",
-    "chesenas1.ai",
-    "ianever.ai",
-    "mapleleaf.ai",
-    "mr1617.ai",
-    "pipi888.ai",
-    "qifeiba.ai",
-    "rukia.ai",
-    "song000.ai",
-    "xiaopeng.ai",
-    "xiyu3.ai"
-   ],
-   "agentsNote": "15 tracked agents minted",
-   "at": "2026-11-21T15:08:10+01:00",
-   "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
-   "cost": "free",
-   "kind": "token",
-   "minters": 15,
-   "name": "Agentic Coin",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "AGC"
   },
   {
    "agents": [
@@ -442,34 +470,6 @@
    "name": "Relay",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "RELAY"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai"
-   ],
-   "agentsNote": "1 tracked agents minted",
-   "at": "2026-11-21T01:04:06+01:00",
-   "contract": "0x02a9830b695229d0bcaa39d236778c257b87d85b",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Urbanova Plots",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "PLOT"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai"
-   ],
-   "agentsNote": "1 tracked agents minted",
-   "at": "2026-11-21T01:00:13+01:00",
-   "contract": "0xad0d78689d047bb9a32f5bf93438373a73da68ec",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Vitaliq Scans",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "SCAN"
   },
   {
    "agents": [
@@ -1202,5 +1202,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-21T23:40:40.269941+01:00"
+ "updatedAt": "2026-11-22T01:12:50.625740+01:00"
 }
