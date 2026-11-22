@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "nofomok.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-22T12:01:11+01:00",
+   "contract": "0xb43f944a16991011e1aa0aecf70b501d68e9e74c",
+   "cost": "free",
+   "kind": "token",
+   "minters": 1,
+   "name": "Agent Black Hole",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "BLKH"
+  },
+  {
+   "agents": [
     "0xjl1222.ai",
     "0xshenyuan.ai",
     "a9julebu.ai",
@@ -1332,5 +1346,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-22T10:57:08.129133+01:00"
+ "updatedAt": "2026-11-22T12:12:07.761484+01:00"
 }
