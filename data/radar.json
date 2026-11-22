@@ -2,6 +2,24 @@
  "events": [
   {
    "agents": [
+    "0xjl1222.ai",
+    "cx1988.ai",
+    "kk1314.ai",
+    "nofomok.ai",
+    "song000.ai"
+   ],
+   "agentsNote": "5 tracked agents minted",
+   "at": "2026-11-22T18:09:25+01:00",
+   "contract": "0x6fc563428b3d6cdd151cb57f0ca5859615c02260",
+   "cost": "paid",
+   "kind": "token",
+   "minters": 5,
+   "name": "bibi",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "bibi"
+  },
+  {
+   "agents": [
     "0xjl1222.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -13,23 +31,6 @@
    "name": "Bohr Agentic",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "BAGT"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai",
-    "cx1988.ai",
-    "nofomok.ai",
-    "song000.ai"
-   ],
-   "agentsNote": "4 tracked agents minted",
-   "at": "2026-11-22T17:23:45+01:00",
-   "contract": "0x6fc563428b3d6cdd151cb57f0ca5859615c02260",
-   "cost": "paid",
-   "kind": "token",
-   "minters": 4,
-   "name": "bibi",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "bibi"
   },
   {
    "agents": [
@@ -1378,5 +1379,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-22T18:04:05.835772+01:00"
+ "updatedAt": "2026-11-22T18:12:03.821946+01:00"
 }
