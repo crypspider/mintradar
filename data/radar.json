@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-22T09:54:03+01:00",
+   "contract": "0x09e9b9bff5df2931818ab731b10610de293a0dcf",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "DRIXOR",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "DRX"
+  },
+  {
+   "agents": [
     "0xjl1222.ai",
     "0xshenyuan.ai",
     "a9julebu.ai",
@@ -1318,5 +1332,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-22T09:12:03.909017+01:00"
+ "updatedAt": "2026-11-22T09:57:09.917878+01:00"
 }
