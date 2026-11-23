@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "101111.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-23T12:00:04+01:00",
+   "contract": "0x5295169fce5d29f30de528f2b76983fd5260f57e",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Electric Ride",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "eRIDE"
+  },
+  {
+   "agents": [
     "0xshenyuan.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -1434,22 +1448,8 @@
    "name": "PXIO Miners",
    "note": "Grew from 1,734 to 10,010 minters in days \u2014 quiet agent accumulation before the crowd.",
    "symbol": "PXIOM"
-  },
-  {
-   "agents": [
-    "0xshenyuan.ai"
-   ],
-   "agentsNote": "Detected via tracked agent mints",
-   "at": "2026-11-13T17:18:00+01:00",
-   "contract": "0x156482ad3f0eebd8e3f70d494ebd1da3f738f5ba",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 2830,
-   "name": "ONLYAI Crystals",
-   "note": "Free NFT mint detected by the watch.",
-   "symbol": "OCRY"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-23T10:12:06.235654+01:00"
+ "updatedAt": "2026-11-23T12:12:09.044727+01:00"
 }
