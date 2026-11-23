@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "nofomok.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-23T03:56:16+01:00",
+   "contract": "0x7e2bd45cd95d6603f347c5310ee1ce9dd145c70b",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Antopia",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "ANTOPIA"
+  },
+  {
+   "agents": [
     "0xjl1222.ai",
     "0xshenyuan.ai",
     "a9julebu.ai",
@@ -1407,5 +1421,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-23T03:12:10.175757+01:00"
+ "updatedAt": "2026-11-23T04:12:04.342309+01:00"
 }
