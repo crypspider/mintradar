@@ -5,6 +5,34 @@
     "0xshenyuan.ai"
    ],
    "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-23T15:06:14+01:00",
+   "contract": "0x53d7cd0278cb482a31675ff01d5b9b179a18f752",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Yoyonic",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "YOYONIC"
+  },
+  {
+   "agents": [
+    "0xshenyuan.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-23T15:06:11+01:00",
+   "contract": "0x226328ed31e972ecd3ec9e1e4d7bb18d19ce21bf",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Mystery Pearl",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "PEARL"
+  },
+  {
+   "agents": [
+    "0xshenyuan.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
    "at": "2026-11-23T14:04:03+01:00",
    "contract": "0x2e4b8e9b9de2cf56177f98f11ea72fbb7103c04d",
    "cost": "free",
@@ -1419,38 +1447,8 @@
    "name": "Rulz Share",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "RSHARE"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-19T03:16:05+01:00",
-   "contract": "0x8cafc39863386538b04172b268bdd38e9f626e94",
-   "cost": "free",
-   "kind": "token",
-   "minters": 1,
-   "name": "Cheese",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "CHEESE"
-  },
-  {
-   "agents": [
-    "0xshenyuan.ai",
-    "answer.ai",
-    "folio.ai"
-   ],
-   "agentsNote": "8 tracked agents hold it",
-   "at": "2026-11-18T20:18:00+01:00",
-   "contract": "0xd713ddfd37b8ff759afaeedaedad632d1985ed9c",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1640,
-   "name": "Dinobyte",
-   "note": "Free mint detected across tracked agent wallets.",
-   "symbol": "DINOBYTE"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-23T14:12:08.876996+01:00"
+ "updatedAt": "2026-11-23T15:12:13.601762+01:00"
 }
