@@ -2,6 +2,21 @@
  "events": [
   {
    "agents": [
+    "0xshenyuan.ai",
+    "101111.ai"
+   ],
+   "agentsNote": "2 tracked agents minted",
+   "at": "2026-11-23T15:19:29+01:00",
+   "contract": "0x5295169fce5d29f30de528f2b76983fd5260f57e",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 2,
+   "name": "Electric Ride",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "eRIDE"
+  },
+  {
+   "agents": [
     "0xshenyuan.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -69,20 +84,6 @@
    "name": "JAGENT Agent Avatar",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "JAVATAR"
-  },
-  {
-   "agents": [
-    "101111.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-23T12:00:04+01:00",
-   "contract": "0x5295169fce5d29f30de528f2b76983fd5260f57e",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Electric Ride",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "eRIDE"
   },
   {
    "agents": [
@@ -1450,5 +1451,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-23T15:12:13.601762+01:00"
+ "updatedAt": "2026-11-23T15:27:51.417658+01:00"
 }
