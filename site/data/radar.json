@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-23T05:03:45+01:00",
+   "contract": "0x0780ce13d66fd84d675622f3da018479dd2ae41a",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Satsagents",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "SATS"
+  },
+  {
+   "agents": [
     "0xjl1222.ai",
     "0xshenyuan.ai",
     "a9julebu.ai",
@@ -1421,5 +1435,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-23T04:57:13.982656+01:00"
+ "updatedAt": "2026-11-23T05:12:04.467857+01:00"
 }
