@@ -2,6 +2,220 @@
  "events": [
   {
    "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-24T16:55:49+01:00",
+   "contract": "0xb77d3495d3ed4427da78c9d0f7cb76c21c23d9fe",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Kryntar Divers",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "KRYNT"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-24T16:55:38+01:00",
+   "contract": "0xb904462778ac6206030bfb4f4542b29f421ea0b7",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "ChampX Cargo",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "CXC"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-24T16:55:29+01:00",
+   "contract": "0x9a433e02ae25da7dae95d4524004d15cce147e87",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Cubizens",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "CUBI"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-24T16:55:18+01:00",
+   "contract": "0x3db83c288a0c7c91b31d855df079aca5763ac3ef",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "DeadGrid",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "DGRID"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-24T16:55:08+01:00",
+   "contract": "0x3cdf19fef2a22c2013e838440d7d09b5225804c9",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Hearthtally Log",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "HTLOG"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-24T16:54:58+01:00",
+   "contract": "0x30765c498ee2c619340b6c96f06ce62e663c7e95",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Combwork Cell",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "CWCELL"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-24T16:54:48+01:00",
+   "contract": "0x065795d56e60087668a2a2ba5e247eadef914d8d",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "sidecoo Lantern",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "SCLAN"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agents minted",
+   "at": "2026-11-24T16:53:41+01:00",
+   "contract": "0x8918082302cb4cc675f47771535a00c0b1ed41c2",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Noctivell",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "NTVL"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agents minted",
+   "at": "2026-11-24T16:53:23+01:00",
+   "contract": "0xa46c0048de23bfebebb55e2adce9acd51c88652a",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Pyrevow Relics",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "PYRV"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai",
+    "0xzed.ai"
+   ],
+   "agentsNote": "2 tracked agents minted",
+   "at": "2026-11-24T16:52:39+01:00",
+   "contract": "0xb4139ecb4f897e891f768d2ab3b5c3a380ecdcd3",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 2,
+   "name": "Seolint Scan",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "SCAN"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agents minted",
+   "at": "2026-11-24T16:52:20+01:00",
+   "contract": "0x9a17a906e58c9ddac8e8559b183fe3c69c87aee1",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Viridial Pass",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "VRDL"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai",
+    "0xzed.ai"
+   ],
+   "agentsNote": "2 tracked agents minted",
+   "at": "2026-11-24T16:52:03+01:00",
+   "contract": "0x9feb50ae2dba712a3f121f65f07be8802af39a5e",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 2,
+   "name": "Ostrenne",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "OSTR"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai",
+    "0xzed.ai"
+   ],
+   "agentsNote": "2 tracked agents minted",
+   "at": "2026-11-24T16:51:42+01:00",
+   "contract": "0xafbdd45e7a6719775a7909ba15eddf0f68f7df70",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 2,
+   "name": "BEWORK PASS",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "BPASS"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai",
+    "0xzed.ai"
+   ],
+   "agentsNote": "2 tracked agents minted",
+   "at": "2026-11-24T16:51:18+01:00",
+   "contract": "0xe71dc7bb9cb95fa6ee92c09a9d79a7c26b78eeaf",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 2,
+   "name": "Contextgraph Nodes",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "NODE"
+  },
+  {
+   "agents": [
+    "0xzed.ai"
+   ],
+   "agentsNote": "1 tracked agents minted",
+   "at": "2026-11-24T16:51:00+01:00",
+   "contract": "0x38c1695eb72b7522c8d6452a4ce27122532a0d69",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "AgentNova Remnants",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "REMNANT"
+  },
+  {
+   "agents": [
     "0xjl1222.ai",
     "0xshenyuan.ai",
     "a9julebu.ai",
@@ -73,21 +287,6 @@
    "name": "IGNIS",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "IGNIS"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai",
-    "0xzed.ai"
-   ],
-   "agentsNote": "2 tracked agents minted",
-   "at": "2026-11-24T06:58:04+01:00",
-   "contract": "0xafbdd45e7a6719775a7909ba15eddf0f68f7df70",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 2,
-   "name": "BEWORK PASS",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "BPASS"
   },
   {
    "agents": [
@@ -390,34 +589,6 @@
   },
   {
    "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agents minted",
-   "at": "2026-11-22T02:06:37+01:00",
-   "contract": "0x8918082302cb4cc675f47771535a00c0b1ed41c2",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Noctivell",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "NTVL"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agents minted",
-   "at": "2026-11-22T02:06:27+01:00",
-   "contract": "0xa46c0048de23bfebebb55e2adce9acd51c88652a",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Pyrevow Relics",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "PYRV"
-  },
-  {
-   "agents": [
     "0xjl1222.ai",
     "0xzed.ai"
    ],
@@ -430,65 +601,6 @@
    "name": "sidecoo Daily",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "SCDAILY"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai",
-    "0xzed.ai"
-   ],
-   "agentsNote": "2 tracked agents minted",
-   "at": "2026-11-22T02:06:04+01:00",
-   "contract": "0xe71dc7bb9cb95fa6ee92c09a9d79a7c26b78eeaf",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 2,
-   "name": "Contextgraph Nodes",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "NODE"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai",
-    "0xzed.ai"
-   ],
-   "agentsNote": "2 tracked agents minted",
-   "at": "2026-11-22T02:05:52+01:00",
-   "contract": "0xb4139ecb4f897e891f768d2ab3b5c3a380ecdcd3",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 2,
-   "name": "Seolint Scan",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "SCAN"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agents minted",
-   "at": "2026-11-22T02:05:41+01:00",
-   "contract": "0x9a17a906e58c9ddac8e8559b183fe3c69c87aee1",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Viridial Pass",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "VRDL"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai",
-    "0xzed.ai"
-   ],
-   "agentsNote": "2 tracked agents minted",
-   "at": "2026-11-22T02:05:30+01:00",
-   "contract": "0x9feb50ae2dba712a3f121f65f07be8802af39a5e",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 2,
-   "name": "Ostrenne",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "OSTR"
   },
   {
    "agents": [
@@ -603,20 +715,6 @@
    "name": "AgentPass",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "APASS"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agents minted",
-   "at": "2026-11-22T02:03:30+01:00",
-   "contract": "0x38c1695eb72b7522c8d6452a4ce27122532a0d69",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "AgentNova Remnants",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "REMNANT"
   },
   {
    "agents": [
@@ -1354,106 +1452,8 @@
    "name": "DinoAgent",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "DINO"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-19T07:33:14+01:00",
-   "contract": "0xef9b77d0f8f9bea2058483dd0330cab823d4ad1c",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "AgentClaim Badge",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "ACBADGE"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-19T07:32:59+01:00",
-   "contract": "0xc29741f54bf41d7df36f952a9f207a1a91fbd1e7",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "AgentStamp",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "STMP"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-19T07:32:46+01:00",
-   "contract": "0x126af9585953004cbb9c5a0b37fc5616dd5f3b43",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "AgentBadge",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "ABDG"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-19T07:32:35+01:00",
-   "contract": "0xde4c3c4ea57963e52fed2ec772a819a8d0c702fd",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Agent ID Pioneer",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "AGP"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-19T07:32:24+01:00",
-   "contract": "0xdf72e80ec7d3266d754050391508fba914168717",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Agent Pioneer Badge",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "APB"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-19T07:32:13+01:00",
-   "contract": "0x6be9e81145628a42bd9bc005960ce96d8b73409c",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "AgentClaim Pioneer Badge",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "ACPB"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-19T07:32:02+01:00",
-   "contract": "0xc463960af285b7eda0909d362ae31783597c2076",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "DeepShard",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "DSHARD"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-24T12:30:54.366148+01:00"
+ "updatedAt": "2026-11-24T16:57:30.024337+01:00"
 }
