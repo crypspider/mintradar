@@ -21,7 +21,7 @@
     "xiyu3.ai"
    ],
    "agentsNote": "17 tracked agents minted",
-   "at": "2026-11-24T11:41:06+01:00",
+   "at": "2026-11-24T12:17:51+01:00",
    "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
    "cost": "free",
    "kind": "token",
@@ -29,6 +29,20 @@
    "name": "Agentic Coin",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "AGC"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-24T12:14:16+01:00",
+   "contract": "0xf8d546bf2cccbf32cb9ad78c81cc13b7e6e858ae",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Polypline Polyp",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "PLPOLYP"
   },
   {
    "agents": [
@@ -1438,22 +1452,8 @@
    "name": "DeepShard",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "DSHARD"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-19T07:31:31+01:00",
-   "contract": "0x0c458d61848ef7ffd753fbdd1179a7053a60661f",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Baiwor Passport",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "BWP"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-24T12:00:05.203014+01:00"
+ "updatedAt": "2026-11-24T12:30:54.366148+01:00"
 }
