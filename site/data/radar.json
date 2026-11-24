@@ -2,6 +2,22 @@
  "events": [
   {
    "agents": [
+    "a9julebu.ai",
+    "cx1988.ai",
+    "woaiai.ai"
+   ],
+   "agentsNote": "3 tracked agents minted",
+   "at": "2026-11-24T10:47:14+01:00",
+   "contract": "0x2d81a59df5bee318d74f47f25c04313443b4f183",
+   "cost": "paid",
+   "kind": "token",
+   "minters": 3,
+   "name": "IGNIS",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "IGNIS"
+  },
+  {
+   "agents": [
     "0xjl1222.ai",
     "0xzed.ai"
    ],
@@ -14,21 +30,6 @@
    "name": "BEWORK PASS",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "BPASS"
-  },
-  {
-   "agents": [
-    "a9julebu.ai",
-    "cx1988.ai"
-   ],
-   "agentsNote": "2 tracked agents minted",
-   "at": "2026-11-24T06:15:39+01:00",
-   "contract": "0x2d81a59df5bee318d74f47f25c04313443b4f183",
-   "cost": "paid",
-   "kind": "token",
-   "minters": 2,
-   "name": "IGNIS",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "IGNIS"
   },
   {
    "agents": [
@@ -1454,5 +1455,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-24T07:12:07.950890+01:00"
+ "updatedAt": "2026-11-24T11:00:59.814501+01:00"
 }
