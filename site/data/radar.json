@@ -2,25 +2,12 @@
  "events": [
   {
    "agents": [
-    "0xjl1222.ai"
-   ],
-   "agentsNote": "1 tracked agents minted",
-   "at": "2026-11-24T01:04:06+01:00",
-   "contract": "0x02a9830b695229d0bcaa39d236778c257b87d85b",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Urbanova Plots",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "PLOT"
-  },
-  {
-   "agents": [
     "0xjl1222.ai",
     "0xshenyuan.ai",
     "a9julebu.ai",
     "alingling.ai",
     "bigsht.ai",
+    "chesenas.ai",
     "chesenas1.ai",
     "fuckcrypto.ai",
     "ianever.ai",
@@ -33,15 +20,29 @@
     "xiaopeng.ai",
     "xiyu3.ai"
    ],
-   "agentsNote": "16 tracked agents minted",
-   "at": "2026-11-24T01:02:04+01:00",
+   "agentsNote": "17 tracked agents minted",
+   "at": "2026-11-24T01:40:06+01:00",
    "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
    "cost": "free",
    "kind": "token",
-   "minters": 16,
+   "minters": 17,
    "name": "Agentic Coin",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "AGC"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agents minted",
+   "at": "2026-11-24T01:04:06+01:00",
+   "contract": "0x02a9830b695229d0bcaa39d236778c257b87d85b",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Urbanova Plots",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "PLOT"
   },
   {
    "agents": [
@@ -1451,5 +1452,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-24T01:12:20.227441+01:00"
+ "updatedAt": "2026-11-24T01:42:11.874129+01:00"
 }
