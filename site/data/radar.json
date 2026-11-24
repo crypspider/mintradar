@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "0xshenyuan.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-24T02:03:09+01:00",
+   "contract": "0xc04d69b1cbd831753b05e3dda8bbe29706c2ccfb",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "DroidDynasty",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "DROID"
+  },
+  {
+   "agents": [
     "0xjl1222.ai",
     "0xshenyuan.ai",
     "a9julebu.ai",
@@ -1435,22 +1449,8 @@
    "name": "Mandalux",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "MANDALUX"
-  },
-  {
-   "agents": [
-    "nofomok.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-19T06:58:12+01:00",
-   "contract": "0x08e3e40829718913fb627c818cb334b1e3d5b699",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Rulz Share",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "RSHARE"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-24T01:42:11.874129+01:00"
+ "updatedAt": "2026-11-24T02:12:14.432457+01:00"
 }
