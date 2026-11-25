@@ -2,6 +2,25 @@
  "events": [
   {
    "agents": [
+    "101111.ai",
+    "dokss.ai",
+    "maka.ai",
+    "nofomok.ai",
+    "r1yan.ai",
+    "sjnsn.ai"
+   ],
+   "agentsNote": "6 tracked agents minted",
+   "at": "2026-11-25T13:04:24+01:00",
+   "contract": "0x19f85f15f348f01f4af85d67d02c0bebc1e31b45",
+   "cost": "paid",
+   "kind": "token",
+   "minters": 6,
+   "name": "GIAT Protocol",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "GIAT"
+  },
+  {
+   "agents": [
     "nofomok.ai"
    ],
    "agentsNote": "1 tracked agents minted",
@@ -1426,24 +1445,8 @@
    "name": "Crude Oil",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "CRUDE"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai",
-    "a9julebu.ai",
-    "qifeiba.ai"
-   ],
-   "agentsNote": "3 tracked agents minted",
-   "at": "2026-11-19T18:02:08+01:00",
-   "contract": "0x8434d0ea4521471c25f94aaa707b33d95486c2e7",
-   "cost": "paid",
-   "kind": "nft",
-   "minters": 3,
-   "name": "agentGTA Arms",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "AGTA"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-25T12:57:11.673462+01:00"
+ "updatedAt": "2026-11-25T13:12:05.098451+01:00"
 }
