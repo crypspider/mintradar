@@ -2,6 +2,34 @@
  "events": [
   {
    "agents": [
+    "0xshenyuan.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-25T11:02:36+01:00",
+   "contract": "0x8d292d7d423bc48b5f1954f2c0440cfbe9dabd7d",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Ledgera",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "LEDGERA"
+  },
+  {
+   "agents": [
+    "0xshenyuan.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-25T11:02:34+01:00",
+   "contract": "0x1fab92b937572c79550aeee51cee77d3add20367",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Mechfarm",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "MECHFARM"
+  },
+  {
+   "agents": [
     "0xjl1222.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -1414,37 +1442,8 @@
    "name": "MARIO",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "MARIO"
-  },
-  {
-   "agents": [
-    "a9julebu.ai",
-    "qifeiba.ai"
-   ],
-   "agentsNote": "2 tracked agents minted",
-   "at": "2026-11-19T14:59:33+01:00",
-   "contract": "0x1e178ea6072df282039ee4f47836597593f0a4e9",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 2,
-   "name": "Agentic Mining Grok",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "AMGROK"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-19T14:50:01+01:00",
-   "contract": "0xccd663253e201a02f77c68f7bf74a370c0d1a8ec",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Forge Miners",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "FORGEM"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-25T08:57:09.429551+01:00"
+ "updatedAt": "2026-11-25T11:12:26.178266+01:00"
 }
