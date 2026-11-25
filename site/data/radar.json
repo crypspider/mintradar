@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "0xshenyuan.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-25T03:02:45+01:00",
+   "contract": "0xeee31d337866a57cd59fdecc8b6e6548e182ea78",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "MECHA",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "MECHA"
+  },
+  {
+   "agents": [
     "0xjl1222.ai"
    ],
    "agentsNote": "1 tracked agents minted",
@@ -1429,24 +1443,8 @@
    "name": "Talvio Dot Robot",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "DOTR"
-  },
-  {
-   "agents": [
-    "mr1617.ai",
-    "nofomok.ai",
-    "song000.ai"
-   ],
-   "agentsNote": "3 tracked agents minted",
-   "at": "2026-11-19T13:00:37+01:00",
-   "contract": "0xc993949a16096888774926279088ed655f527dee",
-   "cost": "paid",
-   "kind": "token",
-   "minters": 3,
-   "name": "LoopAgent LP",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "AgentLP"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-25T01:12:13.717505+01:00"
+ "updatedAt": "2026-11-25T03:12:04.544180+01:00"
 }
