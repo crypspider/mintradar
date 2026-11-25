@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "nofomok.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-25T12:35:30+01:00",
+   "contract": "0x2036f5c957b51d39cb36123bde8f9a65da3ff75d",
+   "cost": "paid",
+   "kind": "token",
+   "minters": 1,
+   "name": "BNBBuilder",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "BNBBuilder"
+  },
+  {
+   "agents": [
     "0xjl1222.ai",
     "0xshenyuan.ai",
     "a9julebu.ai",
@@ -1428,22 +1442,8 @@
    "name": "agentGTA Arms",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "AGTA"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-19T16:00:02+01:00",
-   "contract": "0xd7aa23e8a90542c7eb090d99496305a8855ff248",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "MARIO",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "MARIO"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-25T12:31:13.776905+01:00"
+ "updatedAt": "2026-11-25T12:42:05.969360+01:00"
 }
