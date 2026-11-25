@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "1518.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-25T16:01:44+01:00",
+   "contract": "0xb1247d0727c06423b123729c12fef2f5fd5e09b5",
+   "cost": "paid",
+   "kind": "token",
+   "minters": 1,
+   "name": "AGENTMINT",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "AGENTMINT"
+  },
+  {
+   "agents": [
     "bigsht.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -1431,22 +1445,8 @@
    "name": "Panda Free Card",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "PFREE"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-19T19:15:15+01:00",
-   "contract": "0x80f6ef7e09c0e30be9b08d9c707890fad5d422b8",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "XIA AGENT PASS",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "XIAPASS"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-25T13:27:05.854729+01:00"
+ "updatedAt": "2026-11-25T16:18:58.853231+01:00"
 }
