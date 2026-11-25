@@ -4,8 +4,8 @@
    "agents": [
     "nofomok.ai"
    ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-25T12:35:30+01:00",
+   "agentsNote": "1 tracked agents minted",
+   "at": "2026-11-25T12:43:35+01:00",
    "contract": "0x2036f5c957b51d39cb36123bde8f9a65da3ff75d",
    "cost": "paid",
    "kind": "token",
@@ -1445,5 +1445,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-25T12:42:05.969360+01:00"
+ "updatedAt": "2026-11-25T12:57:11.673462+01:00"
 }
