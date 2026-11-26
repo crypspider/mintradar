@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "nofomok.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-26T13:12:24+01:00",
+   "contract": "0xcdef2cee0feeb21fe1d94cdcba20e7cfb8b0994d",
+   "cost": "paid",
+   "kind": "token",
+   "minters": 1,
+   "name": "MEME AGENT COIN",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "MEME"
+  },
+  {
+   "agents": [
     "0xshenyuan.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -1432,22 +1446,8 @@
    "name": "Wok Agent Badge",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "WOKAB"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-20T18:56:34+01:00",
-   "contract": "0xb8506b4ed75bb6f2369a98bb0f467768d68b2de0",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "AgentDrop Claim NFT",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "ADRP"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-26T13:12:07.293505+01:00"
+ "updatedAt": "2026-11-26T13:27:07.304984+01:00"
 }
