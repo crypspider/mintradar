@@ -2,10 +2,25 @@
  "events": [
   {
    "agents": [
+    "0xshenyuan.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-26T13:05:47+01:00",
+   "contract": "0x91524e684d3ac878ac6048dbec2657db1e40314a",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "KEYPOT",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "KPOT"
+  },
+  {
+   "agents": [
     "0xjl1222.ai",
     "0xshenyuan.ai",
     "a9julebu.ai",
     "alingling.ai",
+    "axi.ai",
     "bigsht.ai",
     "chesenas.ai",
     "chesenas1.ai",
@@ -20,12 +35,12 @@
     "xiaopeng.ai",
     "xiyu3.ai"
    ],
-   "agentsNote": "17 tracked agents minted",
-   "at": "2026-11-26T12:17:02+01:00",
+   "agentsNote": "18 tracked agents minted",
+   "at": "2026-11-26T12:58:10+01:00",
    "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
    "cost": "free",
    "kind": "token",
-   "minters": 17,
+   "minters": 18,
    "name": "Agentic Coin",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "AGC"
@@ -1431,23 +1446,8 @@
    "name": "AgentDrop Claim NFT",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "ADRP"
-  },
-  {
-   "agents": [
-    "0xshenyuan.ai",
-    "0xzed.ai"
-   ],
-   "agentsNote": "2 tracked agents minted",
-   "at": "2026-11-20T18:56:12+01:00",
-   "contract": "0x2d9943d20930ec59d7b432a0cf30521f8c0cc016",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 2,
-   "name": "SunHarvest",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "SHARV"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-26T12:34:28.720503+01:00"
+ "updatedAt": "2026-11-26T13:12:07.293505+01:00"
 }
