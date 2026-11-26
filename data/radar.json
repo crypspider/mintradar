@@ -5,6 +5,20 @@
     "0xshenyuan.ai"
    ],
    "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-26T19:02:14+01:00",
+   "contract": "0x9a79f06f094379df68fcc68744b243a2a6ada2d4",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "UNICORN",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "UNI"
+  },
+  {
+   "agents": [
+    "0xshenyuan.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
    "at": "2026-11-26T17:02:23+01:00",
    "contract": "0x70fe0b09576116f66da153bb755fadce95b938ca",
    "cost": "free",
@@ -1432,22 +1446,8 @@
    "name": "AGENTRA GENESIS",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "AGTRG"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-21T07:14:29+01:00",
-   "contract": "0x02bf66bec0307d539c0b440ac7a1ef7ad7fb9847",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Stratava Miners",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "STVA"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-26T17:12:09.939822+01:00"
+ "updatedAt": "2026-11-26T19:18:08.020577+01:00"
 }
