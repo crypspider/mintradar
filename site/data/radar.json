@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "0xshenyuan.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-26T16:10:11+01:00",
+   "contract": "0xb3542c2eda4830383357db956d3433e36b96aec9",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "GACHA Cards",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "GCARD"
+  },
+  {
+   "agents": [
     "nofomok.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -1432,22 +1446,8 @@
    "name": "Kitsune",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "KITSUNE"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-20T19:10:37+01:00",
-   "contract": "0x9347bc23e404386957029ad89aefc72b8b7365bc",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "sidecoo Check-in",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "SCCHECKIN"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-26T15:27:17.761892+01:00"
+ "updatedAt": "2026-11-26T16:12:30.815132+01:00"
 }
