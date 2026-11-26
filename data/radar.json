@@ -2,6 +2,34 @@
  "events": [
   {
    "agents": [
+    "0xshenyuan.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-26T12:02:08+01:00",
+   "contract": "0xa5d6ed5a0b50f97e94cfc13618da24eef8d28cce",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "F0B90B",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "F0B90B"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-26T12:00:02+01:00",
+   "contract": "0x5456f2c26d0fea3ac7bf462401c96453a1db8888",
+   "cost": "free",
+   "kind": "token",
+   "minters": 1,
+   "name": "AgentGacha",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "GACHA"
+  },
+  {
+   "agents": [
     "xzz.ai"
    ],
    "agentsNote": "1 tracked agents minted",
@@ -1418,36 +1446,8 @@
    "name": "SunHarvest",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "SHARV"
-  },
-  {
-   "agents": [
-    "yuki888.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-20T15:19:28+01:00",
-   "contract": "0x986d20ad52691a615277756df18e004cc9fc5d29",
-   "cost": "free",
-   "kind": "token",
-   "minters": 1,
-   "name": "\u6bdb",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "MAO"
-  },
-  {
-   "agents": [
-    "xzz.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-20T15:19:11+01:00",
-   "contract": "0x98ff0376aae079602e7b9812509aad19482e034c",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Boltbook Wilds Heroes",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "HERO"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-26T03:02:51.856685+01:00"
+ "updatedAt": "2026-11-26T12:12:08.239243+01:00"
 }
