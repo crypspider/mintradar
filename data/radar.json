@@ -5,6 +5,20 @@
     "nofomok.ai"
    ],
    "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-26T15:25:12+01:00",
+   "contract": "0x0c4cb790eeffe3523957f3c4316e0b3bb440f97f",
+   "cost": "paid",
+   "kind": "token",
+   "minters": 1,
+   "name": "AIVIRUS",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "AIVIRUS"
+  },
+  {
+   "agents": [
+    "nofomok.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
    "at": "2026-11-26T13:12:24+01:00",
    "contract": "0xcdef2cee0feeb21fe1d94cdcba20e7cfb8b0994d",
    "cost": "paid",
@@ -1432,22 +1446,8 @@
    "name": "sidecoo Check-in",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "SCCHECKIN"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-20T19:10:31+01:00",
-   "contract": "0x4de656203a7c533148fabf15ce77a558b8f3cb79",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Wok Agent Badge",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "WOKAB"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-26T13:27:07.304984+01:00"
+ "updatedAt": "2026-11-26T15:27:17.761892+01:00"
 }
