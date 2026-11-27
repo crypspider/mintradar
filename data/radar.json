@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "mr1617.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-27T15:42:47+01:00",
+   "contract": "0xb61da0e2353c900e2f91dd71093fd59afd162886",
+   "cost": "paid",
+   "kind": "token",
+   "minters": 1,
+   "name": "MEMESwap LPs",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "MS-LP"
+  },
+  {
+   "agents": [
     "0xjl1222.ai",
     "0xshenyuan.ai",
     "a9julebu.ai",
@@ -1430,22 +1444,8 @@
    "name": "Voltrune Rigs",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "VTRN"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-21T07:18:19+01:00",
-   "contract": "0xd0448e22f958f5a6b058c2fcf7c83cf77cc29a5a",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "RUMBLE",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "RUMBLE"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-27T12:27:03.493930+01:00"
+ "updatedAt": "2026-11-27T16:15:27.645915+01:00"
 }
