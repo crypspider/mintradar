@@ -22,7 +22,7 @@
     "xiyu3.ai"
    ],
    "agentsNote": "18 tracked agents minted",
-   "at": "2026-11-27T11:19:19+01:00",
+   "at": "2026-11-27T12:23:16+01:00",
    "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
    "cost": "free",
    "kind": "token",
@@ -1447,5 +1447,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-27T11:33:40.777712+01:00"
+ "updatedAt": "2026-11-27T12:27:03.493930+01:00"
 }
