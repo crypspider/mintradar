@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "xzz.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-28T14:38:45+01:00",
+   "contract": "0x986d20ad52691a615277756df18e004cc9fc5d29",
+   "cost": "free",
+   "kind": "token",
+   "minters": 1,
+   "name": "\u6bdb",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "MAO"
+  },
+  {
+   "agents": [
     "0xjl1222.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -1436,22 +1450,8 @@
    "name": "Agent ID Pioneer Badge",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "AIDPB"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-21T07:21:26+01:00",
-   "contract": "0x1c429817f69b45a47879e2177c95ddfd15b39c93",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Bibilung Agent Badge",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "BAB"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-28T12:31:57.016596+01:00"
+ "updatedAt": "2026-11-28T14:42:33.889180+01:00"
 }
