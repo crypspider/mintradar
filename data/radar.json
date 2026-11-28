@@ -5,6 +5,20 @@
     "0xshenyuan.ai"
    ],
    "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-28T17:02:59+01:00",
+   "contract": "0x8433ad00601c57ce9f144b20a32ae478eee831ae",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Forecast League House",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "FLHOUSE"
+  },
+  {
+   "agents": [
+    "0xshenyuan.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
    "at": "2026-11-28T16:02:05+01:00",
    "contract": "0x84353b021713f0aee1819c82c2de7c5ae5170579",
    "cost": "free",
@@ -1436,22 +1450,8 @@
    "name": "LogicLoom",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "LOOM"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-21T07:22:13+01:00",
-   "contract": "0x7ff80cdcf465c19dece061a509c8b5444ddf9b77",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Piupiu Pass",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "PPASS"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-28T16:12:14.059419+01:00"
+ "updatedAt": "2026-11-28T17:12:13.743990+01:00"
 }
