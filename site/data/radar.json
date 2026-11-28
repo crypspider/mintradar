@@ -2,6 +2,48 @@
  "events": [
   {
    "agents": [
+    "0xshenyuan.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-28T10:45:04+01:00",
+   "contract": "0x30b6b8c67ab2239185536ba3766e8cb05bfd18ae",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Forecast League Stamp",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "FLSTAMP"
+  },
+  {
+   "agents": [
+    "0xshenyuan.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-28T10:44:56+01:00",
+   "contract": "0x3e73bc0309c72ea69bd74cadec943668291ca6ed",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "Forecast League Honor",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "FLHONOR"
+  },
+  {
+   "agents": [
+    "nofomok.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-28T10:29:59+01:00",
+   "contract": "0xe34f70eece2aa5a8f8eac799b741043868786951",
+   "cost": "paid",
+   "kind": "token",
+   "minters": 1,
+   "name": "SpaceXCoin",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "SpaceXCoin"
+  },
+  {
+   "agents": [
     "0xzero.ai",
     "1518.ai",
     "bigsht.ai",
@@ -1408,50 +1450,8 @@
    "name": "BLater Card",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "BLATER"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-21T07:20:51+01:00",
-   "contract": "0xa4a3907bbfb9a5f071efba30972783e6b0aadfab",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Rugged Cash",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "RGC"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-21T07:20:11+01:00",
-   "contract": "0x589507376c85c318be7575fcabcc08601381e71d",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "FA CAI Collector Card",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "FACAICARD"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-21T07:19:51+01:00",
-   "contract": "0x4fc2245eb165f7e41749f2f8cb50379dc5f01526",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Logger NFTs",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "LOGR"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-28T08:42:04.157947+01:00"
+ "updatedAt": "2026-11-28T10:57:12.704292+01:00"
 }
