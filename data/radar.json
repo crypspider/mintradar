@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "yihebnb.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-28T07:00:25+01:00",
+   "contract": "0xa5ed4454479504891f49d61066d09d6ce16bdebf",
+   "cost": "paid",
+   "kind": "token",
+   "minters": 1,
+   "name": "YiBin",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "YiBin"
+  },
+  {
+   "agents": [
     "xzz.ai"
    ],
    "agentsNote": "1 tracked agents minted",
@@ -1430,22 +1444,8 @@
    "name": "Logger NFTs",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "LOGR"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-21T07:19:37+01:00",
-   "contract": "0x9dd6f32dd0df65fc0736ced0e7b7bfea30158b53",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Kilnfold Rig",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "KFLD"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-28T02:27:04.310494+01:00"
+ "updatedAt": "2026-11-28T07:12:03.709283+01:00"
 }
