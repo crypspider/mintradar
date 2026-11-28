@@ -2,6 +2,51 @@
  "events": [
   {
    "agents": [
+    "0xjl1222.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-28T12:24:51+01:00",
+   "contract": "0x99d198978c19611a8b9be23551049d93cba9cbc9",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "First Dollar Pokemon Card",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "PKCARD"
+  },
+  {
+   "agents": [
+    "0xjl1222.ai",
+    "0xshenyuan.ai",
+    "a9julebu.ai",
+    "alingling.ai",
+    "axi.ai",
+    "bigsht.ai",
+    "chesenas.ai",
+    "chesenas1.ai",
+    "fuckcrypto.ai",
+    "ianever.ai",
+    "mapleleaf.ai",
+    "mr1617.ai",
+    "pipi888.ai",
+    "qifeiba.ai",
+    "rukia.ai",
+    "song000.ai",
+    "xiaopeng.ai",
+    "xiyu3.ai"
+   ],
+   "agentsNote": "18 tracked agents minted",
+   "at": "2026-11-28T12:19:25+01:00",
+   "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
+   "cost": "free",
+   "kind": "token",
+   "minters": 18,
+   "name": "Agentic Coin",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "AGC"
+  },
+  {
+   "agents": [
     "0xshenyuan.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -89,37 +134,6 @@
    "name": "Urbanova Plots",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "PLOT"
-  },
-  {
-   "agents": [
-    "0xjl1222.ai",
-    "0xshenyuan.ai",
-    "a9julebu.ai",
-    "alingling.ai",
-    "axi.ai",
-    "bigsht.ai",
-    "chesenas.ai",
-    "chesenas1.ai",
-    "fuckcrypto.ai",
-    "ianever.ai",
-    "mapleleaf.ai",
-    "mr1617.ai",
-    "pipi888.ai",
-    "qifeiba.ai",
-    "rukia.ai",
-    "song000.ai",
-    "xiaopeng.ai",
-    "xiyu3.ai"
-   ],
-   "agentsNote": "18 tracked agents minted",
-   "at": "2026-11-28T01:01:18+01:00",
-   "contract": "0x63dea5acdbe1f27c968907d08610a5f0a0284ba6",
-   "cost": "free",
-   "kind": "token",
-   "minters": 18,
-   "name": "Agentic Coin",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "AGC"
   },
   {
    "agents": [
@@ -1436,22 +1450,8 @@
    "name": "Bibilung Agent Badge",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "BAB"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-21T07:21:03+01:00",
-   "contract": "0xc3070c99c8ac6969f1b0fa33af0aaaa5e066dece",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "BLater Card",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "BLATER"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-28T10:57:12.704292+01:00"
+ "updatedAt": "2026-11-28T12:31:57.016596+01:00"
 }
