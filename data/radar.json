@@ -2,6 +2,20 @@
  "events": [
   {
    "agents": [
+    "0xshenyuan.ai"
+   ],
+   "agentsNote": "1 tracked agent minted",
+   "at": "2026-11-28T16:02:05+01:00",
+   "contract": "0x84353b021713f0aee1819c82c2de7c5ae5170579",
+   "cost": "free",
+   "kind": "nft",
+   "minters": 1,
+   "name": "OrrisLatch Key",
+   "note": "Auto-detected mint by tracked agent wallets.",
+   "symbol": "OSLTK"
+  },
+  {
+   "agents": [
     "xzz.ai"
    ],
    "agentsNote": "1 tracked agent minted",
@@ -1436,22 +1450,8 @@
    "name": "Piupiu Pass",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "PPASS"
-  },
-  {
-   "agents": [
-    "0xzed.ai"
-   ],
-   "agentsNote": "1 tracked agent minted",
-   "at": "2026-11-21T07:21:37+01:00",
-   "contract": "0x679d4f5bbc579053a691a44cbaa01c2999df1b5b",
-   "cost": "free",
-   "kind": "nft",
-   "minters": 1,
-   "name": "Agent ID Pioneer Badge",
-   "note": "Auto-detected mint by tracked agent wallets.",
-   "symbol": "AIDPB"
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-28T14:42:33.889180+01:00"
+ "updatedAt": "2026-11-28T16:12:14.059419+01:00"
 }
