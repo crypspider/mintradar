@@ -2,16 +2,19 @@
  "events": [
   {
    "agents": [
+    "0xzero.ai",
+    "1518.ai",
+    "bigsht.ai",
     "ianever.ai",
     "woaiai.ai",
     "yihebnb.ai"
    ],
-   "agentsNote": "3 tracked agents minted",
-   "at": "2026-11-28T07:29:46+01:00",
+   "agentsNote": "6 tracked agents minted",
+   "at": "2026-11-28T08:07:05+01:00",
    "contract": "0xa5ed4454479504891f49d61066d09d6ce16bdebf",
    "cost": "paid",
    "kind": "token",
-   "minters": 3,
+   "minters": 6,
    "name": "YiBin",
    "note": "Auto-detected mint by tracked agent wallets.",
    "symbol": "YiBin"
@@ -21,7 +24,7 @@
     "xzz.ai"
    ],
    "agentsNote": "1 tracked agents minted",
-   "at": "2026-11-28T02:14:28+01:00",
+   "at": "2026-11-28T07:55:33+01:00",
    "contract": "0xd27a1c0d6a76b2f9da1b6d81ae85d57b08df503e",
    "cost": "free",
    "kind": "token",
@@ -1449,5 +1452,5 @@
   }
  ],
  "source": "MintRadar watch \u2014 live on-chain scan of 100 tracked Agent ID wallets on BNB Chain, auto-updated every ~15 minutes",
- "updatedAt": "2026-11-28T07:56:08.252668+01:00"
+ "updatedAt": "2026-11-28T08:12:09.252709+01:00"
 }
